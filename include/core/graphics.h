@@ -27,7 +27,6 @@ void fill(layer_t layer, color_t color); //Fill layer with color
 void create_layer(int width, int height); //Create a layer (need more params?)
 void screen_flip(void); //Flip screen (page flipping)
 void screen_update(void); //Update screen
-void 
 
 
 #endif
