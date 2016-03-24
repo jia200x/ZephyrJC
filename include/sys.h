@@ -54,5 +54,21 @@ static inline int linked_list_count_elem(linked_list_t *linked_list)
 	}
 	return n;
 }
+static inline void *linked_list_get_head_obj(linked_list_t *linked_list)
+{
+	if(linked_list != NULL)
+	{
+		if (linked_list->head != NULL)
+		{
+			return linked_list->head->data;
+		}
+	}
+	return NULL;
+}
+
+static inline *ll_node_t linked_list_obj_next(ll_node_t *obj)
+{
+	return obj->next;
+}
 
 #endif
