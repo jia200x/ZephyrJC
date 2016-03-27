@@ -1,7 +1,7 @@
-
 #ifndef GAME_SCEN_MAN_H
 #define GAME_SCEN_MAN_H
 
+#include "core/graphics.h"
 typedef struct scenario_manager_t
 {
 	scenario_t *current_scenario;
