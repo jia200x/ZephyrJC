@@ -2,6 +2,7 @@
 #define TILES_H
 
 #include "core.h"
+#include <inttypes.h>
 
 struct tilemap_t_
 {

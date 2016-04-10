@@ -1,3 +1,4 @@
+#include "component/transform.h"
 
 void transform_init(transform_t *t)
 {

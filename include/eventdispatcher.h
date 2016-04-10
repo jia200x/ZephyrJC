@@ -20,5 +20,8 @@ typedef struct event_dispatcher_t
 	event_container_t *_ev_list[EV_NUMOFEVENTS];
 } event_dispatcher_t;
 
-void dispatch_event(event_dispatcher_t *ed, int event,void *args); 
+
+void event_dispatcher_init(event_dispatcher_t *ed);
+int dispatch_event(event_dispatcher_t *ed, int event,void *args); 
+int register_event_callback(event_dispatcher_t *ed, int event, void *target, void (*func)(void *target, void*args));
 #endif

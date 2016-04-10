@@ -5,11 +5,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#if 0
 // Include GLEW
+#if defined (__APPLE_CC__)
+#include <OpenGL/gl3.h>
+#else
 #include <GL/glew.h>
+#endif
 
 // Include GLFW
+#if defined (__APPLE_CC__)
+#include <GLFW/glfw3.h>
+#else
 #include <glfw3.h>
+#endif
 GLFWwindow* window;
 
 // Include GLM
@@ -17,6 +26,7 @@ GLFWwindow* window;
 using namespace glm;
 
 #include <common/shader.hpp>
+#endif
 
 /* Base struct for a layer */
 typedef struct spriteBuffer_t
@@ -26,21 +36,22 @@ typedef struct spriteBuffer_t
 
 /* Struct for handling color */
 
-struct color_t_
+typedef struct color_t
 {
 	uint8_t r;
 	uint8_t g;
 	uint8_t b;
-};
+} color_t;
 
 /* Only one graphics_t struct, and handles all information of */
-struct graphics_t_
+struct graphics_t
 {
 	int d;
-};
+} graphics_t;
 
 void graphics_init(void) // Init graphics
 {
+	#if 0
 	// Initialise GLFW
 	if( !glfwInit() )
 	{
@@ -142,8 +153,7 @@ void graphics_init(void) // Init graphics
 
 	// Close OpenGL window and terminate GLFW
 	glfwTerminate();
-
-	return 0;
+#endif
 }
 void blit(spriteBuffer_t source, spriteBuffer_t dest, int source_x, int  source_y); // Draw source in dest, reading source from source_x,source_y
 void fill(spriteBuffer_t buffer, color_t color); //Fill layer with color

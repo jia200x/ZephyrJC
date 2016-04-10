@@ -1,10 +1,9 @@
 #ifndef CORE_H
 #define CORE_H
 
-#include "types.h"
 
-struct core_t_
+typedef struct core_t
 {
 	int dummy;
-};
+} core_t;
 #endif

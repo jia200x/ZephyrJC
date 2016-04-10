@@ -1,17 +1,20 @@
 #ifndef GAME_OBJECT_T
 #define GAME_OBJECT_T
 
-#include "types.h"
 #include <inttypes.h>
+#include "component.h"
+#include "sys.h"
 
-struct object_t_
+typedef struct object_t
 {
 	int id;
-	link_list_t components;
-};
+	linked_list_t components;
+} object_t;
 
-void object_init(object_t *obj)
-void add_component(object_t *obj, ll_node_t component)
+typedef struct scenario_t scenario_t;
+
+void object_init(scenario_t *scenario, object_t *obj);
+void add_component(object_t *obj, component_t *component);
 void register_object(object_t *obj, scenario_t *scenario);
 
 #endif
