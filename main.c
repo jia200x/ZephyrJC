@@ -3,6 +3,7 @@
 
 int main(void)
 {
+	graphics_init();
 	core_t core;
 	//
 	//Add scenario manager
