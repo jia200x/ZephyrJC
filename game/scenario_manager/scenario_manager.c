@@ -15,17 +15,9 @@ void add_scenario(scenario_manager_t *sm, scenario_t *scenario)
 }
 void process(scenario_manager_t *sm)
 {
-	sm->current_scenario->process();
+	scenario_process(sm->current_scenario, sm->core->input_state);
 }
-void render(scenario_manager_t *sm)
+void sm_render(scenario_manager_t *sm)
 {
-	/* TODO: To be done... (Ya pue Patricio!)
-	self.core.graphics.screen.fill((0,0,0))
-	*/
-
-	sm->current_scenario->render(sm->core)
-		/*TODO: Culpa de Patricio
-	self.core.graphics.flip()
-	*/
+	scenario_render(sm->current_scenario, sm->core)
 }
-#endif

@@ -1,20 +1,14 @@
 #include "scenario/scenario.h"
 
-void init(scenario_t *scenario)
+void scenario_init(scenario_t *scenario)
 {
 	linked_list_init(scenario->objects);
-	scenario->view_x = 0;
-	scenario->view_y = 0;
 }
 
-void process(scenario_t *scenario)
-{
-	object_elem_t *curr_obj = linked_list_get_head_obj(sm->objects);
 
-	while(curr_obj != NULL)
-	{
-		obj->data->process();
-	}
+void scenario_process(scenario_t *scenario, input_state_t *input_state)
+{
+	dispatch_event(scenario, EV_UPDATE, (void*) input_state);
 }
 void register_scenario(scenario_t *scenario, scenartio_manager_t *sm)
 {
@@ -22,11 +16,7 @@ void register_scenario(scenario_t *scenario, scenartio_manager_t *sm)
 }
 void render(scenario_t *scenario, core_t *core)
 {
-	/*
-	for o in self.objects:
-		#By default, render current sprite at x, y
-		core.graphics.screen.blit(o.sprite, (o.x-self.view_x, o.y-self.view_y)) 
-	*/
+	dispatch_event(scenario, EV_RENDER, (void*) core->graphics);
 }
 void add_object(scenario_t *scenario, object_t *obj)
 {
