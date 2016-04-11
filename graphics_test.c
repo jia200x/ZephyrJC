@@ -14,8 +14,13 @@ int main(void)
 	color.g = 0;
 	color.b = 0;
 
+	rect_t src;
+	src.x = 30;
+	src.y = 30;
+	src.w = 200;
+	src.h = 200;
 	screen_fill(&graphics.screen, &color);
-	blit(&sprite, &graphics.screen, 0,0,500,500,0,60);
+	blit(&sprite, &graphics.screen, &src, &src);
 	screen_update(&graphics);
 	graphics_free();
 	return 0;

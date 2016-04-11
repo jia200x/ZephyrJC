@@ -4,11 +4,13 @@
 #include <inttypes.h>
 #include "component.h"
 #include "sys.h"
+#include "graphics.h"
 
 typedef struct object_t
 {
 	int id;
 	linked_list_t components;
+	spriteBuffer_t test;
 } object_t;
 
 typedef struct scenario_t scenario_t;

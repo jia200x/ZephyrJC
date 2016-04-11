@@ -32,6 +32,7 @@ int register_event_callback(event_dispatcher_t *ed, int event, void *target, voi
 	}
 
 	event_container_t *ec = (event_container_t*) malloc(sizeof(event_container_t));	
+	ec->target = target;
 	ec->next = NULL;
 	ec->func = func;
 	if (ed->_ev_list[event] == NULL)

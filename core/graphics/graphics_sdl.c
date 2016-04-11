@@ -20,21 +20,36 @@ void graphics_init(graphics_t *graphics, int width, int height, int bpp, void *a
 	graphics->screen._sprite = (void*) SDL_GetWindowSurface(window);
 }
 
-void blit(spriteBuffer_t *source, spriteBuffer_t *dest, int source_x, int  source_y, int width, int height, int dest_x, int dest_y)
+int blit(spriteBuffer_t *source, spriteBuffer_t *dest, rect_t *rsrc, rect_t *rdst)
 {
 	SDL_Rect srcrect;
 	SDL_Rect dstrect;
-	srcrect.x = source_x;
-	srcrect.y = source_y;
-	srcrect.w = width;
-	srcrect.h = height;
-	dstrect.x = dest_x;
-	dstrect.y = dest_y;
-	dstrect.w = width;
-	dstrect.h = height;
 
-	SDL_BlitSurface((SDL_Surface*) source->_sprite, &srcrect, (SDL_Surface*) dest->_sprite, &dstrect);
+	SDL_Rect *final_src = NULL;
+	SDL_Rect *final_dst = NULL;
+
+	if(rsrc != NULL)
+	{
+		srcrect.x = rsrc->x;
+		srcrect.y = rsrc->y;
+		srcrect.w = rsrc->w;
+		srcrect.h = rsrc->h;
+		final_src = &srcrect;
+	}
+	if(rdst != NULL)
+	{
+		dstrect.x = rdst->x;
+		dstrect.y = rdst->y;
+		dstrect.w = rdst->w;
+		dstrect.h = rdst->h;
+		final_dst = &dstrect;
+	}
+
+
+	SDL_BlitSurface((SDL_Surface*) source->_sprite, final_src, (SDL_Surface*) dest->_sprite, final_dst);
+	return 0;
 }
+
 
 
 void graphics_free(void)
@@ -50,7 +65,6 @@ void screen_fill(spriteBuffer_t *buffer, color_t *color)
 void screen_update(graphics_t *graphics)
 {
 	SDL_UpdateWindowSurface((SDL_Window*) graphics->window); 
-	SDL_Delay( 5000 );
 }
 
 void load_bmp(spriteBuffer_t *sprite, char* filename)

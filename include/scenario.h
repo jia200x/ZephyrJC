@@ -5,6 +5,7 @@
 #include "sys.h"
 #include "object.h"
 #include "eventdispatcher.h"
+#include "graphics.h"
 
 
 typedef struct scenario_manager_t scenario_manager_t;
@@ -13,6 +14,7 @@ typedef struct scenario_t
 	linked_list_t objects;
 	event_dispatcher_t ed;
 	/*Access to core*/
+	graphics_t *graphics;
 } scenario_t;
 
 void scenario_init(scenario_t *scenario);
