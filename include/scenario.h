@@ -3,11 +3,11 @@
 
 #include <inttypes.h>
 #include "sys.h"
-#include "object.h"
 #include "eventdispatcher.h"
 #include "graphics.h"
 
 
+typedef struct object_t object_t;
 typedef struct scenario_manager_t scenario_manager_t;
 typedef struct scenario_t
 {

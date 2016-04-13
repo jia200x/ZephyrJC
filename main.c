@@ -1,8 +1,11 @@
 #include "scenario_manager.h"
 #include "graphics.h"
+#include "component/transform.h"
+#include <stdio.h>
 
 int main(void)
 {
+	printf("Passed\n");
 	graphics_t graphics;
 	graphics_init(&graphics, 640, 480, 32, NULL);
 	core_t core;
@@ -20,6 +23,9 @@ int main(void)
 
     object_t obj;
 	object_init(&test_scenario, &obj);
+
+	component_t *t = transform_create(&obj);
+	add_component(&obj, t);
 
 	scenario_add_object(&test_scenario, &obj);
 	while(1)
