@@ -13,8 +13,7 @@ typedef struct transform_t
 } transform_t;
 
 typedef struct object_t object_t;
-component_t *transform_create(object_t *obj);
-void transform_init(component_t *t, object_t *obj);
+void transform_init(component_t *t, void  **args);
 void transform_process(void *c, void *args);
 
 #endif

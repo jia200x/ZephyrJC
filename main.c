@@ -24,8 +24,7 @@ int main(void)
     object_t obj;
 	object_init(&test_scenario, &obj);
 
-	component_t *t = transform_create(&obj);
-	add_component(&obj, t);
+	component_create(0,&obj, sizeof(transform_t), &transform_init, NULL);
 
 	scenario_add_object(&test_scenario, &obj);
 	while(1)

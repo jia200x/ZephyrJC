@@ -8,10 +8,13 @@ typedef struct component_t
 	uint8_t type;
 } component_t;
 
-static inline int component_init(component_t *c, uint8_t type, object_t *obj)
+static inline component_t *component_create(uint8_t type, object_t *obj, size_t size, void (*cb)(component_t*, void **args), void **args)
 {
+	component_t *c = malloc(size);
 	c->obj = obj;
 	c->type = type;
-	return 0;
+	cb(c, args);
+	add_component(obj, c);
+	return c;
 }
 #endif
