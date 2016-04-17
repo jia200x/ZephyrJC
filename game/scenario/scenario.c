@@ -3,10 +3,13 @@
 #include "core.h"
 #include "eventdispatcher.h"
 
-void scenario_init(scenario_t *scenario)
+scenario_t *scenario_init(zephyrjc_t *zjc)
 {
-	linked_list_init(&scenario->objects);
-    event_dispatcher_init(&scenario->ed);
+	scenario_t *s = (scenario_t*) malloc(sizeof(scenario_t));	
+	s->graphics = &zjc->core.graphics;
+	linked_list_init(&s->objects);
+    event_dispatcher_init(&s->ed);
+	return s;
 }
 
 void scenario_process(scenario_t *scenario)

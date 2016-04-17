@@ -4,10 +4,13 @@
 #include <stdio.h>
 #include "graphics.h"
 
-void object_init(scenario_t *scenario, object_t *obj)
+object_t *object_init(scenario_t *scenario)
 {
+	object_t *obj = (object_t*) malloc(sizeof(object_t));
 	obj->scenario = scenario;
 	linked_list_init(&obj->components);
+	scenario_add_object(scenario, obj);
+	return obj;
 }
 
 void add_component(object_t *obj, struct component_t *c)

@@ -16,7 +16,7 @@ typedef struct object_t
 } object_t;
 
 
-void object_init(scenario_t *scenario, object_t *obj);
+object_t*object_init(scenario_t *scenario);
 void add_component(object_t *obj, struct component_t *c);
 void register_object(object_t *obj, scenario_t *scenario);
 

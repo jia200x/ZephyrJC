@@ -17,7 +17,7 @@ typedef struct scenario_t
 	graphics_t *graphics;
 } scenario_t;
 
-void scenario_init(scenario_t *scenario);
+scenario_t *scenario_init(zephyrjc_t *zjc);
 
 //Generic
 void scenario_setup(scenario_t *scenario);
