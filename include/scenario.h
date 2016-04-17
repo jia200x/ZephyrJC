@@ -8,7 +8,7 @@
 
 
 typedef struct object_t object_t;
-typedef struct scenario_manager_t scenario_manager_t;
+typedef struct zephyrjc_t zephyrjc_t;
 typedef struct scenario_t
 {
 	linked_list_t objects;
@@ -24,7 +24,7 @@ void scenario_setup(scenario_t *scenario);
 void scenario_process(scenario_t *scenario);
 void scenario_render(scenario_t *scenario);
 
-void register_scenario(scenario_t *scenario, scenario_manager_t *sm);
+void register_scenario(scenario_t *scenario, zephyrjc_t *zjc);
 void scenario_add_object(scenario_t *scenario, object_t *obj);
 
 #endif

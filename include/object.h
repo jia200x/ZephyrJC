@@ -13,7 +13,6 @@ typedef struct object_t
 	int id;
 	linked_list_t components;
 	scenario_t *scenario;
-	spriteBuffer_t test;
 } object_t;
 
 

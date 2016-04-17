@@ -1,5 +1,5 @@
 #include "scenario.h"
-#include "scenario_manager.h"
+#include "zephyrjc.h"
 #include "core.h"
 #include "eventdispatcher.h"
 
@@ -13,10 +13,12 @@ void scenario_process(scenario_t *scenario)
 {
 	dispatch_event(&scenario->ed, EV_UPDATE, NULL);
 }
-void register_scenario(scenario_t *scenario, scenario_manager_t *sm)
+
+void register_scenario(scenario_t *scenario, zephyrjc_t *zjc)
 {
-	sm_add_scenario(sm, scenario);
+	zephyrjc_add_scenario(zjc, scenario);
 }
+
 void scenario_render(scenario_t *scenario)
 {
 	color_t color;
@@ -28,6 +30,7 @@ void scenario_render(scenario_t *scenario)
 	dispatch_event(&scenario->ed, EV_RENDER, (void*) scenario->graphics);
 	screen_update(scenario->graphics);
 }
+
 void scenario_add_object(scenario_t *scenario, object_t *obj)
 {
 	linked_list_add(&scenario->objects, (void*) obj);

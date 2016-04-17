@@ -67,6 +67,11 @@ void screen_update(graphics_t *graphics)
 	SDL_UpdateWindowSurface((SDL_Window*) graphics->window); 
 }
 
+spriteBuffer_t *create_sprite(void)
+{
+	return (spriteBuffer_t*) malloc(sizeof(spriteBuffer_t));
+}
+
 void load_bmp(spriteBuffer_t *sprite, char* filename)
 {
 	sprite->_sprite = (void*) IMG_Load(filename);

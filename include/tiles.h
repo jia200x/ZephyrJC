@@ -4,9 +4,9 @@
 #include "core.h"
 #include <inttypes.h>
 
-struct tilemap_t_
+typedef struct tilemap_t
 {
-	spriteBuffer_t _tilemap;
+	spriteBuffer_t *_tilemap;
 	uint16_t _tw;
 	uint16_t _th;
 	uint16_t _xoffset;
@@ -14,9 +14,7 @@ struct tilemap_t_
 	uint16_t _num_tiles_x;
 	uint16_t _num_tiles_y;
 	uint16_t **tilestruct;
-};
-
-typedef struct tilemap_t_ tilemap_t;
+} tilemap_t;
 
 int tilemap_init(void);
 int tilemap_load_img(void);
