@@ -1,18 +1,29 @@
 CC = gcc
 
 UNAME := $(shell uname)
+OBJECTS = zephyrjc.o zephyrjc_main.o graphics_sdl.o sprite.o transform.o eventdispatcher.o object.o scenario.o scenario_manager.o
+CFLAGS = -Iinclude -g -Wall
+
+SRC = $(wildcard *.c) $(wildcard game/*.c) $(wildcard game/*/*.c) $(wildcard core/*.c) $(wildcard core/*/*.c)
+$(info $(SRC))
 
 ifeq ($(UNAME), Darwin)
-CFLAGS = -g -Wall -framework OpenGL -framework GLUT
-TARGET = "hello_world.elf"
+LDFLAGS = -framework SDL2 -framework SDL2_image
+FOLDER = bin/darwin
+TARGET = zephyr.elf
 else
-CFLAGS = -g -Wall
-TARGET = "hello_world.exe"
+TARGET = zephyr.exe
+FOLDER = bin/win
 endif
 
-$(TARGET): hello_world.o
+$(TARGET): build 
+	gcc $(CFLAGS) $(LDFLAGS) $(SRC) -o $(FOLDER)/$(TARGET)
 
 all: $(TARGET)
 
-$(TARGET): hello_world.c
-	$(CC) $(CFLAGS) -o $(TARGET) hello_world.c
+build:
+	mkdir -p $(FOLDER)
+
+run:
+	./$(FOLDER)/$(TARGET)
+

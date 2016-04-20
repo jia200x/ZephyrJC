@@ -76,3 +76,4 @@ void load_bmp(spriteBuffer_t *sprite, char* filename)
 {
 	sprite->_sprite = (void*) IMG_Load(filename);
 }
+int delete_sprite(spriteBuffer_t *sprite);

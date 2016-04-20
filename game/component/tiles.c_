@@ -1,0 +1,57 @@
+
+#include "tiles.h"
+
+
+int tileengine_init(component_t *c, void **args)
+{
+	register_event_callback(&c->obj->scenario->ed, EV_RENDER, c, &tilemap_render);
+}
+
+tilepool_t *load_tilepool(char *filename, uint16_t tw, uint16_t th, uint16_t xoff, uint16_t yoff)
+{
+	tilepool_t *tp = (tilepool_t*) malloc(sizeof(tilepool_t));	
+	tp->_tilemap = create_sprite();
+	if(!load_bmp(tp->_tilemap, filename))
+	{
+		delete_sprite(tp->_tilemap);
+		free(tp);
+		return NULL;
+	}
+
+	tp->_tw = tw;
+	tp->_th = th;
+	tp->_xoffset = xoff;
+	tp->_yoffset = yoff;
+}
+
+void tileengine_set_depth(tileengine_t *te, uint8_t depth)
+{
+	te->depth = depth;
+}
+
+void tileengine_
+void tileengine_render(void *component, void *args)
+{
+	tileengine_t *te = (tileengine_t*) component;
+	int x;
+	int y;
+	int width;
+	int height;
+	tilemap_t *tilemap = e->current_tilemap;
+
+	int nx = width/tilemap->_tw+1;
+	int ny = height/tilemap->_th+1;
+
+	int c;
+	
+	for(int i=0;i<ny;i++)
+	{
+		for(int j=0;j<nx;j++)
+		{
+			c = *(tilestruct+(i*tilemap->_num_tiles_y+j));
+			blit(tilemap->_tilemap, core->graphics->screen, tilemap->_xoffset+tilemap->_tw*(c%tilemap->_num_tiles_x),tilemap->_yoffset+tilemap->_th*(c/tilemap->_num_tiles_y),,);
+
+		}
+	}
+
+}
