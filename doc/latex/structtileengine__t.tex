@@ -2,6 +2,11 @@
 \label{structtileengine__t}\index{tileengine\+\_\+t@{tileengine\+\_\+t}}
 
 
+Tile engine component.  
+
+
+
+
 {\ttfamily \#include $<$tiles.\+h$>$}
 
 \subsection*{Data Fields}
@@ -9,43 +14,26 @@
 \item 
 \hyperlink{structcomponent__t}{component\+\_\+t} \hyperlink{structtileengine__t_a2bc269e9bc59aa063305bbfb9c1b1e90}{base}
 \item 
-\hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t} \hyperlink{structtileengine__t_ab5bfc8e174c326d26fb236c238730c1f}{tilemaps}
+i \hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t} \hyperlink{structtileengine__t_accc82561bdd41b3046e3df58c519c75c}{tilemaps}
 \item 
-\hyperlink{structtilemap__t}{tilemap\+\_\+t} $\ast$ \hyperlink{structtileengine__t_a4ccb3297bc25e903bdd96dafed96dde0}{current\+\_\+tilemap}
-\item 
-int \hyperlink{structtileengine__t_af49eaed92e5e773f88890a251de4e907}{screen\+\_\+x}
-\item 
-int \hyperlink{structtileengine__t_a0c0e11401653f0e4d6bcc5d6727b4a0c}{screen\+\_\+y}
-\item 
-int \hyperlink{structtileengine__t_a071c688bbadcc7d904c33fe7f633db12}{screen\+\_\+width}
-\item 
-int \hyperlink{structtileengine__t_a01431a1f92001b8e300979a4fccb4ed3}{screen\+\_\+height}
+\hyperlink{structrect__t}{rect\+\_\+t} \hyperlink{structtileengine__t_ab8d030de148154d3ce462b94a8e4dc6f}{source}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Tile engine component. 
 
 \subsection{Field Documentation}
 \index{tileengine\+\_\+t@{tileengine\+\_\+t}!base@{base}}
 \index{base@{base}!tileengine\+\_\+t@{tileengine\+\_\+t}}
 \subsubsection[{\texorpdfstring{base}{base}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf component\+\_\+t} tileengine\+\_\+t\+::base}\hypertarget{structtileengine__t_a2bc269e9bc59aa063305bbfb9c1b1e90}{}\label{structtileengine__t_a2bc269e9bc59aa063305bbfb9c1b1e90}
-\index{tileengine\+\_\+t@{tileengine\+\_\+t}!current\+\_\+tilemap@{current\+\_\+tilemap}}
-\index{current\+\_\+tilemap@{current\+\_\+tilemap}!tileengine\+\_\+t@{tileengine\+\_\+t}}
-\subsubsection[{\texorpdfstring{current\+\_\+tilemap}{current\_tilemap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tilemap\+\_\+t}$\ast$ tileengine\+\_\+t\+::current\+\_\+tilemap}\hypertarget{structtileengine__t_a4ccb3297bc25e903bdd96dafed96dde0}{}\label{structtileengine__t_a4ccb3297bc25e903bdd96dafed96dde0}
-\index{tileengine\+\_\+t@{tileengine\+\_\+t}!screen\+\_\+height@{screen\+\_\+height}}
-\index{screen\+\_\+height@{screen\+\_\+height}!tileengine\+\_\+t@{tileengine\+\_\+t}}
-\subsubsection[{\texorpdfstring{screen\+\_\+height}{screen\_height}}]{\setlength{\rightskip}{0pt plus 5cm}int tileengine\+\_\+t\+::screen\+\_\+height}\hypertarget{structtileengine__t_a01431a1f92001b8e300979a4fccb4ed3}{}\label{structtileengine__t_a01431a1f92001b8e300979a4fccb4ed3}
-\index{tileengine\+\_\+t@{tileengine\+\_\+t}!screen\+\_\+width@{screen\+\_\+width}}
-\index{screen\+\_\+width@{screen\+\_\+width}!tileengine\+\_\+t@{tileengine\+\_\+t}}
-\subsubsection[{\texorpdfstring{screen\+\_\+width}{screen\_width}}]{\setlength{\rightskip}{0pt plus 5cm}int tileengine\+\_\+t\+::screen\+\_\+width}\hypertarget{structtileengine__t_a071c688bbadcc7d904c33fe7f633db12}{}\label{structtileengine__t_a071c688bbadcc7d904c33fe7f633db12}
-\index{tileengine\+\_\+t@{tileengine\+\_\+t}!screen\+\_\+x@{screen\+\_\+x}}
-\index{screen\+\_\+x@{screen\+\_\+x}!tileengine\+\_\+t@{tileengine\+\_\+t}}
-\subsubsection[{\texorpdfstring{screen\+\_\+x}{screen\_x}}]{\setlength{\rightskip}{0pt plus 5cm}int tileengine\+\_\+t\+::screen\+\_\+x}\hypertarget{structtileengine__t_af49eaed92e5e773f88890a251de4e907}{}\label{structtileengine__t_af49eaed92e5e773f88890a251de4e907}
-\index{tileengine\+\_\+t@{tileengine\+\_\+t}!screen\+\_\+y@{screen\+\_\+y}}
-\index{screen\+\_\+y@{screen\+\_\+y}!tileengine\+\_\+t@{tileengine\+\_\+t}}
-\subsubsection[{\texorpdfstring{screen\+\_\+y}{screen\_y}}]{\setlength{\rightskip}{0pt plus 5cm}int tileengine\+\_\+t\+::screen\+\_\+y}\hypertarget{structtileengine__t_a0c0e11401653f0e4d6bcc5d6727b4a0c}{}\label{structtileengine__t_a0c0e11401653f0e4d6bcc5d6727b4a0c}
-\index{tileengine\+\_\+t@{tileengine\+\_\+t}!tilemaps@{tilemaps}}
+\index{tileengine\+\_\+t@{tileengine\+\_\+t}!source@{source}}
+\index{source@{source}!tileengine\+\_\+t@{tileengine\+\_\+t}}
+\subsubsection[{\texorpdfstring{source}{source}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rect\+\_\+t} tileengine\+\_\+t\+::source}\hypertarget{structtileengine__t_ab8d030de148154d3ce462b94a8e4dc6f}{}\label{structtileengine__t_ab8d030de148154d3ce462b94a8e4dc6f}
+Area of tilemap to draw \index{tileengine\+\_\+t@{tileengine\+\_\+t}!tilemaps@{tilemaps}}
 \index{tilemaps@{tilemaps}!tileengine\+\_\+t@{tileengine\+\_\+t}}
-\subsubsection[{\texorpdfstring{tilemaps}{tilemaps}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linked\+\_\+list\+\_\+t} tileengine\+\_\+t\+::tilemaps}\hypertarget{structtileengine__t_ab5bfc8e174c326d26fb236c238730c1f}{}\label{structtileengine__t_ab5bfc8e174c326d26fb236c238730c1f}
-
+\subsubsection[{\texorpdfstring{tilemaps}{tilemaps}}]{\setlength{\rightskip}{0pt plus 5cm}i {\bf linked\+\_\+list\+\_\+t} tileengine\+\_\+t\+::tilemaps}\hypertarget{structtileengine__t_accc82561bdd41b3046e3df58c519c75c}{}\label{structtileengine__t_accc82561bdd41b3046e3df58c519c75c}
+$<$ Inherits from component List of tile maps 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

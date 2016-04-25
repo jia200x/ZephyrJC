@@ -102,11 +102,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsprite__t.html">sprite_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite component.  <a href="structsprite__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:abf15e3a532093f8b4c4be375c8c23505"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsprite__t.html">sprite_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#abf15e3a532093f8b4c4be375c8c23505">sprite_t</a></td></tr>
+<tr class="memdesc:abf15e3a532093f8b4c4be375c8c23505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite component.  <a href="#abf15e3a532093f8b4c4be375c8c23505">More...</a><br /></td></tr>
 <tr class="separator:abf15e3a532093f8b4c4be375c8c23505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27555b6a6718dd529daf3f8acd554745"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structobject__t.html">object_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#a27555b6a6718dd529daf3f8acd554745">object_t</a></td></tr>
 <tr class="separator:a27555b6a6718dd529daf3f8acd554745"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +145,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sprite component. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -169,6 +173,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Init component. Called from create_component.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Pointer to component </td></tr>
+    <tr><td class="paramname">args</td><td>Arguments passed from init </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -195,6 +207,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Registered callback to event EV_RENDER</p>
+<p>Automatically draw sprite</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Pointer to component </td></tr>
+    <tr><td class="paramname">args</td><td>Args from event dispatcher </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -221,6 +242,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set sprite</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite</td><td>Pointer to sprite component </td></tr>
+    <tr><td class="paramname">sb</td><td>Pointer to image to set </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

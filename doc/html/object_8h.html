@@ -103,6 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structobject__t.html">object_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base object. All objects must inherit from this one.  <a href="structobject__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -110,12 +111,13 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ae54ab4292928b9330e245c09daf01726"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structcomponent__t.html">component_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#ae54ab4292928b9330e245c09daf01726">component_t</a></td></tr>
 <tr class="separator:ae54ab4292928b9330e245c09daf01726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a012925d018662e7b0ce2baa544b77b15"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structobject__t.html">object_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a012925d018662e7b0ce2baa544b77b15">object_t</a></td></tr>
+<tr class="memdesc:a012925d018662e7b0ce2baa544b77b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base object. All objects must inherit from this one.  <a href="#a012925d018662e7b0ce2baa544b77b15">More...</a><br /></td></tr>
 <tr class="separator:a012925d018662e7b0ce2baa544b77b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae33d79b20e997ff7552c22b88b74d2db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structobject__t.html">object_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#ae33d79b20e997ff7552c22b88b74d2db">object_init</a> (<a class="el" href="structscenario__t.html">scenario_t</a> *scenario)</td></tr>
-<tr class="separator:ae33d79b20e997ff7552c22b88b74d2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8c75a1d5efbc8091b415e285848bbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structobject__t.html">object_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a4f8c75a1d5efbc8091b415e285848bbf">object_create</a> (<a class="el" href="structscenario__t.html">scenario_t</a> *scenario)</td></tr>
+<tr class="separator:a4f8c75a1d5efbc8091b415e285848bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a987123ac01289d1f52a40b3e09fc9f9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a987123ac01289d1f52a40b3e09fc9f9d">add_component</a> (<a class="el" href="structobject__t.html">object_t</a> *obj, struct <a class="el" href="structcomponent__t.html">component_t</a> *c)</td></tr>
 <tr class="separator:a987123ac01289d1f52a40b3e09fc9f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1465029ef5f7018ad94130903ba904dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a1465029ef5f7018ad94130903ba904dc">register_object</a> (<a class="el" href="structobject__t.html">object_t</a> *obj, <a class="el" href="structscenario__t.html">scenario_t</a> *scenario)</td></tr>
@@ -144,6 +146,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Base object. All objects must inherit from this one. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -170,15 +174,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Add component to object</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Object containing the component. </td></tr>
+    <tr><td class="paramname">c</td><td>Component to add. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="ae33d79b20e997ff7552c22b88b74d2db"></a>
+<a class="anchor" id="a4f8c75a1d5efbc8091b415e285848bbf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structobject__t.html">object_t</a>* object_init </td>
+          <td class="memname"><a class="el" href="structobject__t.html">object_t</a>* object_create </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structscenario__t.html">scenario_t</a> *&#160;</td>
           <td class="paramname"><em>scenario</em></td><td>)</td>
@@ -186,6 +198,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Create a new object</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scenario</td><td>Pointer scenario containg the object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new object </dd></dl>
 
 </div>
 </div>
@@ -212,6 +232,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Register object in scenario</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Object to register. </td></tr>
+    <tr><td class="paramname">scenario</td><td>Scenario containing the object. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

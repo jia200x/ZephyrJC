@@ -3,7 +3,7 @@
 #include "core.h"
 #include "eventdispatcher.h"
 
-scenario_t *scenario_init(zephyrjc_t *zjc)
+scenario_t *scenario_create(zephyrjc_t *zjc)
 {
 	scenario_t *s = (scenario_t*) malloc(sizeof(scenario_t));	
 	s->graphics = &zjc->core.graphics;

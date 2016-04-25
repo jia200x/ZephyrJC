@@ -47,16 +47,18 @@ void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+fre
 \index{graphics.\+h@{graphics.\+h}!color\+\_\+t@{color\+\_\+t}}
 \index{color\+\_\+t@{color\+\_\+t}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{color\+\_\+t}{color\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf color\+\_\+t}  {\bf color\+\_\+t}}\hypertarget{graphics_8h_a0ab832cb1976fa552f7ae0b53abe157c}{}\label{graphics_8h_a0ab832cb1976fa552f7ae0b53abe157c}
-\index{graphics.\+h@{graphics.\+h}!graphics\+\_\+t@{graphics\+\_\+t}}
+Color R\+GB representation \index{graphics.\+h@{graphics.\+h}!graphics\+\_\+t@{graphics\+\_\+t}}
 \index{graphics\+\_\+t@{graphics\+\_\+t}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{graphics\+\_\+t}{graphics\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf graphics\+\_\+t}  {\bf graphics\+\_\+t}}\hypertarget{graphics_8h_abe6e9eceeefbe5d9c0a1f0382937c8f6}{}\label{graphics_8h_abe6e9eceeefbe5d9c0a1f0382937c8f6}
-\index{graphics.\+h@{graphics.\+h}!rect\+\_\+t@{rect\+\_\+t}}
+Graphics controller \index{graphics.\+h@{graphics.\+h}!rect\+\_\+t@{rect\+\_\+t}}
 \index{rect\+\_\+t@{rect\+\_\+t}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{rect\+\_\+t}{rect\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf rect\+\_\+t}  {\bf rect\+\_\+t}}\hypertarget{graphics_8h_a7cbc65ba1cf59e9aeef3a25fcb9a1a78}{}\label{graphics_8h_a7cbc65ba1cf59e9aeef3a25fcb9a1a78}
-\index{graphics.\+h@{graphics.\+h}!sprite\+Buffer\+\_\+t@{sprite\+Buffer\+\_\+t}}
+Representation of a rectangle \index{graphics.\+h@{graphics.\+h}!sprite\+Buffer\+\_\+t@{sprite\+Buffer\+\_\+t}}
 \index{sprite\+Buffer\+\_\+t@{sprite\+Buffer\+\_\+t}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{sprite\+Buffer\+\_\+t}{spriteBuffer\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf sprite\+Buffer\+\_\+t}  {\bf sprite\+Buffer\+\_\+t}}\hypertarget{graphics_8h_adcdbefff4bd5ccc6d294a43b45d8e713}{}\label{graphics_8h_adcdbefff4bd5ccc6d294a43b45d8e713}
+Wrapper of buffer
 
+Abstraction for a layer, surface, bitmap, etc. In case of S\+DL, represents a pointer to a S\+DL Surface. 
 
 \subsection{Function Documentation}
 \index{graphics.\+h@{graphics.\+h}!blit@{blit}}
@@ -69,6 +71,22 @@ void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+fre
 \item[{{\bf rect\+\_\+t} $\ast$}]{rdst}
 \end{DoxyParamCaption}
 )}\hypertarget{graphics_8h_ad2d11208f449ef0711d0731ae0016ae0}{}\label{graphics_8h_ad2d11208f449ef0711d0731ae0016ae0}
+Draw a piece of source into dest.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source buffer \\
+\hline
+{\em dest} & Destination buffer \\
+\hline
+{\em rsrc} & Area of source to read from. \\
+\hline
+{\em rdst} & Location of source in dest. Width and height are ignored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing useful at the moment. 
+\end{DoxyReturn}
 \index{graphics.\+h@{graphics.\+h}!create\+\_\+sprite@{create\+\_\+sprite}}
 \index{create\+\_\+sprite@{create\+\_\+sprite}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{create\+\_\+sprite(void)}{create\_sprite(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sprite\+Buffer\+\_\+t}$\ast$ create\+\_\+sprite (
@@ -76,6 +94,9 @@ void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+fre
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\hypertarget{graphics_8h_ad8acc484e947a35392da6642c1b8c20a}{}\label{graphics_8h_ad8acc484e947a35392da6642c1b8c20a}
+Create a sprite \begin{DoxyReturn}{Returns}
+Pointer to created sprite. 
+\end{DoxyReturn}
 \index{graphics.\+h@{graphics.\+h}!graphics\+\_\+free@{graphics\+\_\+free}}
 \index{graphics\+\_\+free@{graphics\+\_\+free}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{graphics\+\_\+free(void)}{graphics\_free(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void graphics\+\_\+free (
@@ -83,7 +104,7 @@ void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+fre
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\hypertarget{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{}\label{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}
-\index{graphics.\+h@{graphics.\+h}!graphics\+\_\+init@{graphics\+\_\+init}}
+Not implemented yet \index{graphics.\+h@{graphics.\+h}!graphics\+\_\+init@{graphics\+\_\+init}}
 \index{graphics\+\_\+init@{graphics\+\_\+init}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{graphics\+\_\+init(graphics\+\_\+t $\ast$graphics, int width, int height, int bpp, void $\ast$args)}{graphics\_init(graphics\_t *graphics, int width, int height, int bpp, void *args)}}]{\setlength{\rightskip}{0pt plus 5cm}void graphics\+\_\+init (
 \begin{DoxyParamCaption}
@@ -94,6 +115,21 @@ void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+fre
 \item[{void $\ast$}]{args}
 \end{DoxyParamCaption}
 )}\hypertarget{graphics_8h_a2374826f2f9d7c4485b2dcf54ea21d79}{}\label{graphics_8h_a2374826f2f9d7c4485b2dcf54ea21d79}
+Init graphics.
+
+Should be called once at the beginning. 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & Pointer to graphics controller \\
+\hline
+{\em width} & Width of screen \\
+\hline
+{\em height} & Height of screen \\
+\hline
+{\em bpp} & Bpp of screen \\
+\hline
+{\em args} & Args for init. \\
+\hline
+\end{DoxyParams}
 \index{graphics.\+h@{graphics.\+h}!load\+\_\+bmp@{load\+\_\+bmp}}
 \index{load\+\_\+bmp@{load\+\_\+bmp}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{load\+\_\+bmp(sprite\+Buffer\+\_\+t $\ast$sprite, char $\ast$filename)}{load\_bmp(spriteBuffer\_t *sprite, char *filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void load\+\_\+bmp (
@@ -102,6 +138,15 @@ void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+fre
 \item[{char $\ast$}]{filename}
 \end{DoxyParamCaption}
 )}\hypertarget{graphics_8h_a00dbf7c7a2abeaa74cf44b01c709087a}{}\label{graphics_8h_a00dbf7c7a2abeaa74cf44b01c709087a}
+Loads an image.
+
+T\+O\+DO\+: Change name to load\+\_\+img 
+\begin{DoxyParams}{Parameters}
+{\em sprite} & Sprite holding the loaded image \\
+\hline
+{\em filename} & File name of image file \\
+\hline
+\end{DoxyParams}
 \index{graphics.\+h@{graphics.\+h}!screen\+\_\+fill@{screen\+\_\+fill}}
 \index{screen\+\_\+fill@{screen\+\_\+fill}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{screen\+\_\+fill(sprite\+Buffer\+\_\+t $\ast$buffer, color\+\_\+t $\ast$color)}{screen\_fill(spriteBuffer\_t *buffer, color\_t *color)}}]{\setlength{\rightskip}{0pt plus 5cm}void screen\+\_\+fill (
@@ -110,6 +155,15 @@ void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+fre
 \item[{{\bf color\+\_\+t} $\ast$}]{color}
 \end{DoxyParamCaption}
 )}\hypertarget{graphics_8h_a56b8c1ba8ac54de37ce0d9278e8ac9f5}{}\label{graphics_8h_a56b8c1ba8ac54de37ce0d9278e8ac9f5}
+Fill a buffer with given color.
+
+T\+O\+DO\+: Change name of function to Sprite\+Buffer\+Fill 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Buffer to be filled \\
+\hline
+{\em color} & Color of fill. \\
+\hline
+\end{DoxyParams}
 \index{graphics.\+h@{graphics.\+h}!screen\+\_\+update@{screen\+\_\+update}}
 \index{screen\+\_\+update@{screen\+\_\+update}!graphics.\+h@{graphics.\+h}}
 \subsubsection[{\texorpdfstring{screen\+\_\+update(graphics\+\_\+t $\ast$graphics)}{screen\_update(graphics\_t *graphics)}}]{\setlength{\rightskip}{0pt plus 5cm}void screen\+\_\+update (
@@ -117,3 +171,10 @@ void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+fre
 \item[{{\bf graphics\+\_\+t} $\ast$}]{graphics}
 \end{DoxyParamCaption}
 )}\hypertarget{graphics_8h_a069c36b129c2a7d37dcc730a7ff343b3}{}\label{graphics_8h_a069c36b129c2a7d37dcc730a7ff343b3}
+Refresh screen.
+
+Should be called after drawing everything 
+\begin{DoxyParams}{Parameters}
+{\em graphics} & Pointer to graphics controller \\
+\hline
+\end{DoxyParams}

@@ -5,9 +5,9 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structll__node__t}{ll\+\_\+node\+\_\+t}
-\item 
+\begin{DoxyCompactList}\small\item\em Linked list node. \end{DoxyCompactList}\item 
 struct \hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,8 +17,21 @@ struct \hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \hyperlink{structll__node__t}{ll\+\_\+node\+\_\+t} \hyperlink{sys_8h_aae27b4143a27d7bf62191e5fa475f91c}{ll\+\_\+node\+\_\+t}
-\item 
+\begin{DoxyCompactList}\small\item\em Linked list node. \end{DoxyCompactList}\item 
 typedef struct \hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t} \hyperlink{sys_8h_afffbf8924bc1f20c96657a2b82e63055}{linked\+\_\+list\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{sys_8h_aabc661746c0df6b85646c5c6ab76d3d4}{linked\+\_\+list\+\_\+init} (\hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t} $\ast$linked\+\_\+list)
+\item 
+static void \hyperlink{sys_8h_a1f36a1fb3b40837b5eff552e703144b3}{linked\+\_\+list\+\_\+add} (\hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t} $\ast$linked\+\_\+list, void $\ast$data)
+\item 
+static int \hyperlink{sys_8h_afe5a93ded68a8383fd79c9ed808826f0}{linked\+\_\+list\+\_\+count\+\_\+elem} (\hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t} $\ast$linked\+\_\+list)
+\item 
+static void $\ast$ \hyperlink{sys_8h_aa3fa5962cf45e039ddf6539c0bedaa08}{linked\+\_\+list\+\_\+get\+\_\+head\+\_\+obj} (\hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t} $\ast$linked\+\_\+list)
+\item 
+static \hyperlink{structll__node__t}{ll\+\_\+node\+\_\+t} $\ast$ \hyperlink{sys_8h_a5a99bd7762a3df3a02f96211e774f482}{linked\+\_\+list\+\_\+obj\+\_\+next} (\hyperlink{structll__node__t}{ll\+\_\+node\+\_\+t} $\ast$obj)
 \end{DoxyCompactItemize}
 
 
@@ -32,6 +45,93 @@ typedef struct \hyperlink{structlinked__list__t}{linked\+\_\+list\+\_\+t} \hyper
 \index{sys.\+h@{sys.\+h}!linked\+\_\+list\+\_\+t@{linked\+\_\+list\+\_\+t}}
 \index{linked\+\_\+list\+\_\+t@{linked\+\_\+list\+\_\+t}!sys.\+h@{sys.\+h}}
 \subsubsection[{\texorpdfstring{linked\+\_\+list\+\_\+t}{linked\_list\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf linked\+\_\+list\+\_\+t}  {\bf linked\+\_\+list\+\_\+t}}\hypertarget{sys_8h_afffbf8924bc1f20c96657a2b82e63055}{}\label{sys_8h_afffbf8924bc1f20c96657a2b82e63055}
-\index{sys.\+h@{sys.\+h}!ll\+\_\+node\+\_\+t@{ll\+\_\+node\+\_\+t}}
+
+
+Linked list. 
+
+Please don\textquotesingle{}t access to members directly. Use provided functions instead. \index{sys.\+h@{sys.\+h}!ll\+\_\+node\+\_\+t@{ll\+\_\+node\+\_\+t}}
 \index{ll\+\_\+node\+\_\+t@{ll\+\_\+node\+\_\+t}!sys.\+h@{sys.\+h}}
 \subsubsection[{\texorpdfstring{ll\+\_\+node\+\_\+t}{ll\_node\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ll\+\_\+node\+\_\+t}  {\bf ll\+\_\+node\+\_\+t}}\hypertarget{sys_8h_aae27b4143a27d7bf62191e5fa475f91c}{}\label{sys_8h_aae27b4143a27d7bf62191e5fa475f91c}
+
+
+Linked list node. 
+
+
+
+\subsection{Function Documentation}
+\index{sys.\+h@{sys.\+h}!linked\+\_\+list\+\_\+add@{linked\+\_\+list\+\_\+add}}
+\index{linked\+\_\+list\+\_\+add@{linked\+\_\+list\+\_\+add}!sys.\+h@{sys.\+h}}
+\subsubsection[{\texorpdfstring{linked\+\_\+list\+\_\+add(linked\+\_\+list\+\_\+t $\ast$linked\+\_\+list, void $\ast$data)}{linked\_list\_add(linked\_list\_t *linked\_list, void *data)}}]{\setlength{\rightskip}{0pt plus 5cm}static void linked\+\_\+list\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf linked\+\_\+list\+\_\+t} $\ast$}]{linked\+\_\+list, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{sys_8h_a1f36a1fb3b40837b5eff552e703144b3}{}\label{sys_8h_a1f36a1fb3b40837b5eff552e703144b3}
+Add an element to linked list
+
+
+\begin{DoxyParams}{Parameters}
+{\em linked\+\_\+list} & Pointer to linked list where the new element will be stored. \\
+\hline
+{\em data} & Data to store \\
+\hline
+\end{DoxyParams}
+\index{sys.\+h@{sys.\+h}!linked\+\_\+list\+\_\+count\+\_\+elem@{linked\+\_\+list\+\_\+count\+\_\+elem}}
+\index{linked\+\_\+list\+\_\+count\+\_\+elem@{linked\+\_\+list\+\_\+count\+\_\+elem}!sys.\+h@{sys.\+h}}
+\subsubsection[{\texorpdfstring{linked\+\_\+list\+\_\+count\+\_\+elem(linked\+\_\+list\+\_\+t $\ast$linked\+\_\+list)}{linked\_list\_count\_elem(linked\_list\_t *linked\_list)}}]{\setlength{\rightskip}{0pt plus 5cm}static int linked\+\_\+list\+\_\+count\+\_\+elem (
+\begin{DoxyParamCaption}
+\item[{{\bf linked\+\_\+list\+\_\+t} $\ast$}]{linked\+\_\+list}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{sys_8h_afe5a93ded68a8383fd79c9ed808826f0}{}\label{sys_8h_afe5a93ded68a8383fd79c9ed808826f0}
+Count number of elements of given linked list
+
+
+\begin{DoxyParams}{Parameters}
+{\em linked\+\_\+list} & Pointer to linked list \\
+\hline
+\end{DoxyParams}
+\index{sys.\+h@{sys.\+h}!linked\+\_\+list\+\_\+get\+\_\+head\+\_\+obj@{linked\+\_\+list\+\_\+get\+\_\+head\+\_\+obj}}
+\index{linked\+\_\+list\+\_\+get\+\_\+head\+\_\+obj@{linked\+\_\+list\+\_\+get\+\_\+head\+\_\+obj}!sys.\+h@{sys.\+h}}
+\subsubsection[{\texorpdfstring{linked\+\_\+list\+\_\+get\+\_\+head\+\_\+obj(linked\+\_\+list\+\_\+t $\ast$linked\+\_\+list)}{linked\_list\_get\_head\_obj(linked\_list\_t *linked\_list)}}]{\setlength{\rightskip}{0pt plus 5cm}static void$\ast$ linked\+\_\+list\+\_\+get\+\_\+head\+\_\+obj (
+\begin{DoxyParamCaption}
+\item[{{\bf linked\+\_\+list\+\_\+t} $\ast$}]{linked\+\_\+list}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{sys_8h_aa3fa5962cf45e039ddf6539c0bedaa08}{}\label{sys_8h_aa3fa5962cf45e039ddf6539c0bedaa08}
+Get first element of linked list
+
+
+\begin{DoxyParams}{Parameters}
+{\em linked\+\_\+list} & Pointer to linked list \\
+\hline
+\end{DoxyParams}
+\index{sys.\+h@{sys.\+h}!linked\+\_\+list\+\_\+init@{linked\+\_\+list\+\_\+init}}
+\index{linked\+\_\+list\+\_\+init@{linked\+\_\+list\+\_\+init}!sys.\+h@{sys.\+h}}
+\subsubsection[{\texorpdfstring{linked\+\_\+list\+\_\+init(linked\+\_\+list\+\_\+t $\ast$linked\+\_\+list)}{linked\_list\_init(linked\_list\_t *linked\_list)}}]{\setlength{\rightskip}{0pt plus 5cm}static void linked\+\_\+list\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf linked\+\_\+list\+\_\+t} $\ast$}]{linked\+\_\+list}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{sys_8h_aabc661746c0df6b85646c5c6ab76d3d4}{}\label{sys_8h_aabc661746c0df6b85646c5c6ab76d3d4}
+Init linked list.
+
+M\+U\+ST be called, otherwise you will get a nice buffer overflow. 
+\begin{DoxyParams}{Parameters}
+{\em linked\+\_\+list} & Pointer to linked list \\
+\hline
+\end{DoxyParams}
+\index{sys.\+h@{sys.\+h}!linked\+\_\+list\+\_\+obj\+\_\+next@{linked\+\_\+list\+\_\+obj\+\_\+next}}
+\index{linked\+\_\+list\+\_\+obj\+\_\+next@{linked\+\_\+list\+\_\+obj\+\_\+next}!sys.\+h@{sys.\+h}}
+\subsubsection[{\texorpdfstring{linked\+\_\+list\+\_\+obj\+\_\+next(ll\+\_\+node\+\_\+t $\ast$obj)}{linked\_list\_obj\_next(ll\_node\_t *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf ll\+\_\+node\+\_\+t}$\ast$ linked\+\_\+list\+\_\+obj\+\_\+next (
+\begin{DoxyParamCaption}
+\item[{{\bf ll\+\_\+node\+\_\+t} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{sys_8h_a5a99bd7762a3df3a02f96211e774f482}{}\label{sys_8h_a5a99bd7762a3df3a02f96211e774f482}
+Get next object of node
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Pointer to object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the next object 
+\end{DoxyReturn}

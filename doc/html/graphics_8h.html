@@ -147,6 +147,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Color RGB representation </p>
 
 </div>
 </div>
@@ -159,6 +160,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Graphics controller </p>
 
 </div>
 </div>
@@ -171,6 +173,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Representation of a rectangle </p>
 
 </div>
 </div>
@@ -183,6 +186,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Wrapper of buffer</p>
+<p>Abstraction for a layer, surface, bitmap, etc. In case of SDL, represents a pointer to a SDL Surface. </p>
 
 </div>
 </div>
@@ -222,6 +227,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Draw a piece of source into dest.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Source buffer </td></tr>
+    <tr><td class="paramname">dest</td><td>Destination buffer </td></tr>
+    <tr><td class="paramname">rsrc</td><td>Area of source to read from. </td></tr>
+    <tr><td class="paramname">rdst</td><td>Location of source in dest. Width and height are ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing useful at the moment. </dd></dl>
 
 </div>
 </div>
@@ -238,6 +254,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Create a sprite </p><dl class="section return"><dt>Returns</dt><dd>Pointer to created sprite. </dd></dl>
 
 </div>
 </div>
@@ -254,6 +271,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Not implemented yet </p>
 
 </div>
 </div>
@@ -298,6 +316,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Init graphics.</p>
+<p>Should be called once at the beginning. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>Pointer to graphics controller </td></tr>
+    <tr><td class="paramname">width</td><td>Width of screen </td></tr>
+    <tr><td class="paramname">height</td><td>Height of screen </td></tr>
+    <tr><td class="paramname">bpp</td><td>Bpp of screen </td></tr>
+    <tr><td class="paramname">args</td><td>Args for init. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -324,6 +353,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Loads an image.</p>
+<p>TODO: Change name to load_img </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite</td><td>Sprite holding the loaded image </td></tr>
+    <tr><td class="paramname">filename</td><td>File name of image file </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -350,6 +387,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Fill a buffer with given color.</p>
+<p>TODO: Change name of function to SpriteBufferFill </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Buffer to be filled </td></tr>
+    <tr><td class="paramname">color</td><td>Color of fill. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -366,6 +411,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Refresh screen.</p>
+<p>Should be called after drawing everything </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>Pointer to graphics controller </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

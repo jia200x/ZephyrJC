@@ -8,18 +8,18 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structobject__t}{object\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Base object. All objects must inherit from this one. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \hyperlink{structcomponent__t}{component\+\_\+t} \hyperlink{object_8h_ae54ab4292928b9330e245c09daf01726}{component\+\_\+t}
 \item 
 typedef struct \hyperlink{structobject__t}{object\+\_\+t} \hyperlink{object_8h_a012925d018662e7b0ce2baa544b77b15}{object\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Base object. All objects must inherit from this one. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structobject__t}{object\+\_\+t} $\ast$ \hyperlink{object_8h_ae33d79b20e997ff7552c22b88b74d2db}{object\+\_\+init} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\hyperlink{structobject__t}{object\+\_\+t} $\ast$ \hyperlink{object_8h_a4f8c75a1d5efbc8091b415e285848bbf}{object\+\_\+create} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
 \item 
 void \hyperlink{object_8h_a987123ac01289d1f52a40b3e09fc9f9d}{add\+\_\+component} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj, struct \hyperlink{structcomponent__t}{component\+\_\+t} $\ast$c)
 \item 
@@ -36,6 +36,10 @@ void \hyperlink{object_8h_a1465029ef5f7018ad94130903ba904dc}{register\+\_\+objec
 \subsubsection[{\texorpdfstring{object\+\_\+t}{object\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf object\+\_\+t}  {\bf object\+\_\+t}}\hypertarget{object_8h_a012925d018662e7b0ce2baa544b77b15}{}\label{object_8h_a012925d018662e7b0ce2baa544b77b15}
 
 
+Base object. All objects must inherit from this one. 
+
+
+
 \subsection{Function Documentation}
 \index{object.\+h@{object.\+h}!add\+\_\+component@{add\+\_\+component}}
 \index{add\+\_\+component@{add\+\_\+component}!object.\+h@{object.\+h}}
@@ -45,13 +49,32 @@ void \hyperlink{object_8h_a1465029ef5f7018ad94130903ba904dc}{register\+\_\+objec
 \item[{struct {\bf component\+\_\+t} $\ast$}]{c}
 \end{DoxyParamCaption}
 )}\hypertarget{object_8h_a987123ac01289d1f52a40b3e09fc9f9d}{}\label{object_8h_a987123ac01289d1f52a40b3e09fc9f9d}
-\index{object.\+h@{object.\+h}!object\+\_\+init@{object\+\_\+init}}
-\index{object\+\_\+init@{object\+\_\+init}!object.\+h@{object.\+h}}
-\subsubsection[{\texorpdfstring{object\+\_\+init(scenario\+\_\+t $\ast$scenario)}{object\_init(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf object\+\_\+t}$\ast$ object\+\_\+init (
+Add component to object
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Object containing the component. \\
+\hline
+{\em c} & Component to add. \\
+\hline
+\end{DoxyParams}
+\index{object.\+h@{object.\+h}!object\+\_\+create@{object\+\_\+create}}
+\index{object\+\_\+create@{object\+\_\+create}!object.\+h@{object.\+h}}
+\subsubsection[{\texorpdfstring{object\+\_\+create(scenario\+\_\+t $\ast$scenario)}{object\_create(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf object\+\_\+t}$\ast$ object\+\_\+create (
 \begin{DoxyParamCaption}
 \item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
 \end{DoxyParamCaption}
-)}\hypertarget{object_8h_ae33d79b20e997ff7552c22b88b74d2db}{}\label{object_8h_ae33d79b20e997ff7552c22b88b74d2db}
+)}\hypertarget{object_8h_a4f8c75a1d5efbc8091b415e285848bbf}{}\label{object_8h_a4f8c75a1d5efbc8091b415e285848bbf}
+Create a new object
+
+
+\begin{DoxyParams}{Parameters}
+{\em scenario} & Pointer scenario containg the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new object 
+\end{DoxyReturn}
 \index{object.\+h@{object.\+h}!register\+\_\+object@{register\+\_\+object}}
 \index{register\+\_\+object@{register\+\_\+object}!object.\+h@{object.\+h}}
 \subsubsection[{\texorpdfstring{register\+\_\+object(object\+\_\+t $\ast$obj, scenario\+\_\+t $\ast$scenario)}{register\_object(object\_t *obj, scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+\_\+object (
@@ -60,3 +83,12 @@ void \hyperlink{object_8h_a1465029ef5f7018ad94130903ba904dc}{register\+\_\+objec
 \item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
 \end{DoxyParamCaption}
 )}\hypertarget{object_8h_a1465029ef5f7018ad94130903ba904dc}{}\label{object_8h_a1465029ef5f7018ad94130903ba904dc}
+Register object in scenario
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Object to register. \\
+\hline
+{\em scenario} & Scenario containing the object. \\
+\hline
+\end{DoxyParams}

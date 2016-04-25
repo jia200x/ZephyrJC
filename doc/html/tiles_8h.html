@@ -102,19 +102,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtilepool__t.html">tilepool_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile pool.  <a href="structtilepool__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtilemap__t.html">tilemap_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile map.  <a href="structtilemap__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtileengine__t.html">tileengine_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile engine component.  <a href="structtileengine__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:afe037836be3e5fcad140547e80e685bc"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structtilepool__t.html">tilepool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tiles_8h.html#afe037836be3e5fcad140547e80e685bc">tilepool_t</a></td></tr>
+<tr class="memdesc:afe037836be3e5fcad140547e80e685bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile pool.  <a href="#afe037836be3e5fcad140547e80e685bc">More...</a><br /></td></tr>
 <tr class="separator:afe037836be3e5fcad140547e80e685bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1494a3b9e2ecf57e9352c757197d4551"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structtilemap__t.html">tilemap_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tiles_8h.html#a1494a3b9e2ecf57e9352c757197d4551">tilemap_t</a></td></tr>
+<tr class="memdesc:a1494a3b9e2ecf57e9352c757197d4551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile map.  <a href="#a1494a3b9e2ecf57e9352c757197d4551">More...</a><br /></td></tr>
 <tr class="separator:a1494a3b9e2ecf57e9352c757197d4551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2a3627c81c006fce3f094e577ead458"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structtileengine__t.html">tileengine_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tiles_8h.html#af2a3627c81c006fce3f094e577ead458">tileengine_t</a></td></tr>
+<tr class="memdesc:af2a3627c81c006fce3f094e577ead458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tile engine component.  <a href="#af2a3627c81c006fce3f094e577ead458">More...</a><br /></td></tr>
 <tr class="separator:af2a3627c81c006fce3f094e577ead458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -139,6 +145,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Tile engine component. </p>
+
 </div>
 </div>
 <a class="anchor" id="a1494a3b9e2ecf57e9352c757197d4551"></a>
@@ -151,6 +159,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Tile map. </p>
+<p>Represents a tile map. </p>
+
 </div>
 </div>
 <a class="anchor" id="afe037836be3e5fcad140547e80e685bc"></a>
@@ -162,6 +173,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Tile pool. </p>
+<p>Represents the strip of tiles (a.k.a source of tiles) </p>
 
 </div>
 </div>
@@ -207,6 +221,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Create a tile map</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Pointer</td><td>to tile pool </td></tr>
+    <tr><td class="paramname">tilestruct</td><td>Pointer to tilemap </td></tr>
+    <tr><td class="paramname">size_x</td><td>Number of columns of tile map </td></tr>
+    <tr><td class="paramname">size_y</td><td>Number of rows of tile map </td></tr>
+    <tr><td class="paramname">depth</td><td>Depth of tile map. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -251,6 +276,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Create a tilepool</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>File name of tile pool image </td></tr>
+    <tr><td class="paramname">tw</td><td>Tile width of tile pool </td></tr>
+    <tr><td class="paramname">th</td><td>Tile height of tile pool </td></tr>
+    <tr><td class="paramname">xoff</td><td>X offset of tile pool </td></tr>
+    <tr><td class="paramname">yoff</td><td>Y offset of tile pool </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -277,6 +313,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Callback of component init</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Pointer to tileengine base </td></tr>
+    <tr><td class="paramname">args</td><td>Arguments for initialization </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -303,6 +347,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Callback of render subscription.</p>
+<p>Draws the list of tilemaps.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>Pointer to tile engine </td></tr>
+    <tr><td class="paramname">Args</td><td>from event dispatcher </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

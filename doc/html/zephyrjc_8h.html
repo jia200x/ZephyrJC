@@ -101,6 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structzephyrjc__t.html">zephyrjc_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZephyrJC main engine.  <a href="structzephyrjc__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -108,6 +109,7 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a98942e88b4c36431a4d85c3f87d70ce7"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structscenario__t.html">scenario_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zephyrjc_8h.html#a98942e88b4c36431a4d85c3f87d70ce7">scenario_t</a></td></tr>
 <tr class="separator:a98942e88b4c36431a4d85c3f87d70ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a1c4c0c40870229fecbf6f76b69631c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structzephyrjc__t.html">zephyrjc_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zephyrjc_8h.html#a5a1c4c0c40870229fecbf6f76b69631c">zephyrjc_t</a></td></tr>
+<tr class="memdesc:a5a1c4c0c40870229fecbf6f76b69631c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZephyrJC main engine.  <a href="#a5a1c4c0c40870229fecbf6f76b69631c">More...</a><br /></td></tr>
 <tr class="separator:a5a1c4c0c40870229fecbf6f76b69631c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -120,6 +122,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa5a17886238dd5aed6e1fe2a9d776325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed0728f84bf691c1f38b0098255639d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zephyrjc_8h.html#aed0728f84bf691c1f38b0098255639d3">zephyrjc_init_graphics</a> (<a class="el" href="structzephyrjc__t.html">zephyrjc_t</a> *zjc, int width, int height, int bpp)</td></tr>
 <tr class="separator:aed0728f84bf691c1f38b0098255639d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119b450d50a15d7fface2c9448c970fb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zephyrjc_8h.html#a119b450d50a15d7fface2c9448c970fb">zephyrjc_set_current_scenario</a> (<a class="el" href="structzephyrjc__t.html">zephyrjc_t</a> *zjc, <a class="el" href="structscenario__t.html">scenario_t</a> *scenario)</td></tr>
+<tr class="separator:a119b450d50a15d7fface2c9448c970fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a98942e88b4c36431a4d85c3f87d70ce7"></a>
@@ -143,6 +147,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ZephyrJC main engine. </p>
 
 </div>
 </div>
@@ -170,6 +176,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Add scenario to engine</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zjc</td><td>Pointer to engine </td></tr>
+    <tr><td class="paramname">scenario</td><td>Scenario to add </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -186,6 +200,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Init engine</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to engine </dd></dl>
 
 </div>
 </div>
@@ -224,6 +240,57 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Init graphics.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zjc</td><td>Pointer to engine </td></tr>
+    <tr><td class="paramname">width</td><td>Width of screen </td></tr>
+    <tr><td class="paramname">height</td><td>Height of screen  Bpp of screen </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a119b450d50a15d7fface2c9448c970fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void zephyrjc_set_current_scenario </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structzephyrjc__t.html">zephyrjc_t</a> *&#160;</td>
+          <td class="paramname"><em>zjc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structscenario__t.html">scenario_t</a> *&#160;</td>
+          <td class="paramname"><em>scenario</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the current scenario</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zjc</td><td>Pointer to engine </td></tr>
+    <tr><td class="paramname">scenario</td><td>Scenario to set as current </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -240,6 +307,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Start the engine</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zjc</td><td>Pointer to engine </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

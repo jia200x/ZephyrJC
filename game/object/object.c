@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "graphics.h"
 
-object_t *object_init(scenario_t *scenario)
+object_t *object_create(scenario_t *scenario)
 {
 	object_t *obj = (object_t*) malloc(sizeof(object_t));
 	obj->scenario = scenario;

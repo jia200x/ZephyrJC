@@ -37,16 +37,20 @@ int \hyperlink{eventdispatcher_8h_a460184b297e545152cf25121ec607254}{register\+\
 \index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+container\+\_\+t@{event\+\_\+container\+\_\+t}}
 \index{event\+\_\+container\+\_\+t@{event\+\_\+container\+\_\+t}!eventdispatcher.\+h@{eventdispatcher.\+h}}
 \subsubsection[{\texorpdfstring{event\+\_\+container\+\_\+t}{event\_container\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf event\+\_\+container\+\_\+t}  {\bf event\+\_\+container\+\_\+t}}\hypertarget{eventdispatcher_8h_a1ba2c3c7d598b1c9f3dba9c9b6f67390}{}\label{eventdispatcher_8h_a1ba2c3c7d598b1c9f3dba9c9b6f67390}
-\index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+dispatcher\+\_\+t@{event\+\_\+dispatcher\+\_\+t}}
+Snip of an event.
+
+All snips are linked together and called one by one \index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+dispatcher\+\_\+t@{event\+\_\+dispatcher\+\_\+t}}
 \index{event\+\_\+dispatcher\+\_\+t@{event\+\_\+dispatcher\+\_\+t}!eventdispatcher.\+h@{eventdispatcher.\+h}}
 \subsubsection[{\texorpdfstring{event\+\_\+dispatcher\+\_\+t}{event\_dispatcher\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf event\+\_\+dispatcher\+\_\+t}  {\bf event\+\_\+dispatcher\+\_\+t}}\hypertarget{eventdispatcher_8h_aad6d78bd673db9e5b757df224653d1a8}{}\label{eventdispatcher_8h_aad6d78bd673db9e5b757df224653d1a8}
+Event dispatcher.
 
+Contains a list of event snips for every event. 
 
 \subsection{Enumeration Type Documentation}
 \index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+t@{event\+\_\+t}}
 \index{event\+\_\+t@{event\+\_\+t}!eventdispatcher.\+h@{eventdispatcher.\+h}}
 \subsubsection[{\texorpdfstring{event\+\_\+t}{event\_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf event\+\_\+t}}\hypertarget{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8}{}\label{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8}
-\begin{Desc}
+Label for events of engine\textquotesingle{}s event dispatcher. Extend as necessary \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
 \index{E\+V\+\_\+\+U\+P\+D\+A\+TE@{E\+V\+\_\+\+U\+P\+D\+A\+TE}!eventdispatcher.\+h@{eventdispatcher.\+h}}\index{eventdispatcher.\+h@{eventdispatcher.\+h}!E\+V\+\_\+\+U\+P\+D\+A\+TE@{E\+V\+\_\+\+U\+P\+D\+A\+TE}}\item[{\em 
@@ -69,6 +73,18 @@ E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS\hypertarget{eventdispatcher_8h_a2fb9b5
 \item[{void $\ast$}]{args}
 \end{DoxyParamCaption}
 )}\hypertarget{eventdispatcher_8h_aaed30c53570e0e1ef66a5a4e66bf453b}{}\label{eventdispatcher_8h_aaed30c53570e0e1ef66a5a4e66bf453b}
+Dispatch event 
+\begin{DoxyParams}{Parameters}
+{\em ed} & Pointer to event dispatcher \\
+\hline
+{\em event} & Event to dispatch \\
+\hline
+{\em args} & Args for the callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing useful at the moment... 
+\end{DoxyReturn}
 \index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+dispatcher\+\_\+init@{event\+\_\+dispatcher\+\_\+init}}
 \index{event\+\_\+dispatcher\+\_\+init@{event\+\_\+dispatcher\+\_\+init}!eventdispatcher.\+h@{eventdispatcher.\+h}}
 \subsubsection[{\texorpdfstring{event\+\_\+dispatcher\+\_\+init(event\+\_\+dispatcher\+\_\+t $\ast$ed)}{event\_dispatcher\_init(event\_dispatcher\_t *ed)}}]{\setlength{\rightskip}{0pt plus 5cm}void event\+\_\+dispatcher\+\_\+init (
@@ -76,6 +92,11 @@ E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS\hypertarget{eventdispatcher_8h_a2fb9b5
 \item[{{\bf event\+\_\+dispatcher\+\_\+t} $\ast$}]{ed}
 \end{DoxyParamCaption}
 )}\hypertarget{eventdispatcher_8h_a65b0e821319e4bfeda30b2a1c0b37951}{}\label{eventdispatcher_8h_a65b0e821319e4bfeda30b2a1c0b37951}
+Init event dispatcher 
+\begin{DoxyParams}{Parameters}
+{\em ed} & Pointer to event dispatcher to initialize \\
+\hline
+\end{DoxyParams}
 \index{eventdispatcher.\+h@{eventdispatcher.\+h}!register\+\_\+event\+\_\+callback@{register\+\_\+event\+\_\+callback}}
 \index{register\+\_\+event\+\_\+callback@{register\+\_\+event\+\_\+callback}!eventdispatcher.\+h@{eventdispatcher.\+h}}
 \subsubsection[{\texorpdfstring{register\+\_\+event\+\_\+callback(event\+\_\+dispatcher\+\_\+t $\ast$ed, int event, void $\ast$target, void($\ast$func)(void $\ast$target, void $\ast$args))}{register\_event\_callback(event\_dispatcher\_t *ed, int event, void *target, void(*func)(void *target, void *args))}}]{\setlength{\rightskip}{0pt plus 5cm}int register\+\_\+event\+\_\+callback (
@@ -86,3 +107,19 @@ E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS\hypertarget{eventdispatcher_8h_a2fb9b5
 \item[{void($\ast$)(void $\ast$target, void $\ast$args)}]{func}
 \end{DoxyParamCaption}
 )}\hypertarget{eventdispatcher_8h_a460184b297e545152cf25121ec607254}{}\label{eventdispatcher_8h_a460184b297e545152cf25121ec607254}
+Register a callback for a given target
+
+
+\begin{DoxyParams}{Parameters}
+{\em ed} & Pointer to event dispatcher \\
+\hline
+{\em event} & Event to subscribe. \\
+\hline
+{\em target} & Subscriber of callback \\
+\hline
+{\em func} & Callback function to subscribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing usefull at the moment... 
+\end{DoxyReturn}

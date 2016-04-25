@@ -138,6 +138,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Snip of an event.</p>
+<p>All snips are linked together and called one by one </p>
 
 </div>
 </div>
@@ -150,6 +152,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Event dispatcher.</p>
+<p>Contains a list of event snips for every event. </p>
 
 </div>
 </div>
@@ -163,6 +167,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Label for events of engine's event dispatcher. Extend as necessary </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2fb9b58e4e5f14f40af8b4a1425841f8aa3f01dece20e06860f3c92b89f8b0553"></a>EV_UPDATE&#160;</td><td class="fielddoc">
 </td></tr>
@@ -204,6 +209,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Dispatch event </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ed</td><td>Pointer to event dispatcher </td></tr>
+    <tr><td class="paramname">event</td><td>Event to dispatch </td></tr>
+    <tr><td class="paramname">args</td><td>Args for the callback function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing useful at the moment... </dd></dl>
 
 </div>
 </div>
@@ -220,6 +234,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Init event dispatcher </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ed</td><td>Pointer to event dispatcher to initialize </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -258,6 +278,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Register a callback for a given target</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ed</td><td>Pointer to event dispatcher </td></tr>
+    <tr><td class="paramname">event</td><td>Event to subscribe. </td></tr>
+    <tr><td class="paramname">target</td><td>Subscriber of callback </td></tr>
+    <tr><td class="paramname">func</td><td>Callback function to subscribe </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing usefull at the moment... </dd></dl>
 
 </div>
 </div>

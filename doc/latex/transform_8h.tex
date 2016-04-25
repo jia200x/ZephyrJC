@@ -5,12 +5,12 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structtransform__t}{transform\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Transform component. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \hyperlink{structtransform__t}{transform\+\_\+t} \hyperlink{transform_8h_a1e2303ab637bcaf1fc1d97d90382a159}{transform\+\_\+t}
-\item 
+\begin{DoxyCompactList}\small\item\em Transform component. \end{DoxyCompactList}\item 
 typedef struct \hyperlink{structobject__t}{object\+\_\+t} \hyperlink{transform_8h_a27555b6a6718dd529daf3f8acd554745}{object\+\_\+t}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -31,6 +31,10 @@ void \hyperlink{transform_8h_a68fdb34ee55774515d1652ca5b0f7bac}{transform\+\_\+p
 \subsubsection[{\texorpdfstring{transform\+\_\+t}{transform\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf transform\+\_\+t}  {\bf transform\+\_\+t}}\hypertarget{transform_8h_a1e2303ab637bcaf1fc1d97d90382a159}{}\label{transform_8h_a1e2303ab637bcaf1fc1d97d90382a159}
 
 
+Transform component. 
+
+
+
 \subsection{Function Documentation}
 \index{transform.\+h@{transform.\+h}!transform\+\_\+init@{transform\+\_\+init}}
 \index{transform\+\_\+init@{transform\+\_\+init}!transform.\+h@{transform.\+h}}
@@ -40,6 +44,15 @@ void \hyperlink{transform_8h_a68fdb34ee55774515d1652ca5b0f7bac}{transform\+\_\+p
 \item[{void $\ast$$\ast$}]{args}
 \end{DoxyParamCaption}
 )}\hypertarget{transform_8h_a05bf05399f20889c9e7ca0bfbfbcfe2a}{}\label{transform_8h_a05bf05399f20889c9e7ca0bfbfbcfe2a}
+Init component. Called from create\+\_\+component.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Pointer to component \\
+\hline
+{\em args} & Arguments passed from init \\
+\hline
+\end{DoxyParams}
 \index{transform.\+h@{transform.\+h}!transform\+\_\+process@{transform\+\_\+process}}
 \index{transform\+\_\+process@{transform\+\_\+process}!transform.\+h@{transform.\+h}}
 \subsubsection[{\texorpdfstring{transform\+\_\+process(void $\ast$c, void $\ast$args)}{transform\_process(void *c, void *args)}}]{\setlength{\rightskip}{0pt plus 5cm}void transform\+\_\+process (
@@ -48,3 +61,14 @@ void \hyperlink{transform_8h_a68fdb34ee55774515d1652ca5b0f7bac}{transform\+\_\+p
 \item[{void $\ast$}]{args}
 \end{DoxyParamCaption}
 )}\hypertarget{transform_8h_a68fdb34ee55774515d1652ca5b0f7bac}{}\label{transform_8h_a68fdb34ee55774515d1652ca5b0f7bac}
+Registered callback to event E\+V\+\_\+\+U\+P\+D\+A\+TE
+
+Process physics
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Pointer to component \\
+\hline
+{\em args} & Args from event dispatcher \\
+\hline
+\end{DoxyParams}

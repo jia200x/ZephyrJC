@@ -8,7 +8,7 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structscenario__t}{scenario\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A scenario. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,13 +17,11 @@ typedef struct \hyperlink{structobject__t}{object\+\_\+t} \hyperlink{scenario_8h
 typedef struct \hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} \hyperlink{scenario_8h_a52d3e7530da0906f5eb8b84c8a5a4c9a}{zephyrjc\+\_\+t}
 \item 
 typedef struct \hyperlink{structscenario__t}{scenario\+\_\+t} \hyperlink{scenario_8h_ab07060236e35010a55738843045d8bdf}{scenario\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A scenario. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$ \hyperlink{scenario_8h_a497aa3a1410aa240e5d556fa0ea63957}{scenario\+\_\+init} (\hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} $\ast$zjc)
-\item 
-void \hyperlink{scenario_8h_a71ef727db8ef2bb22eb5d754700fbbd8}{scenario\+\_\+setup} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$ \hyperlink{scenario_8h_a4ef72d482c0b5c22aad4663d382f9134}{scenario\+\_\+create} (\hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} $\ast$zjc)
 \item 
 void \hyperlink{scenario_8h_ab238821cac952c6fab1dd57ef45dacd5}{scenario\+\_\+process} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
 \item 
@@ -42,7 +40,11 @@ void \hyperlink{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}{scenario\+\_\+add
 \index{scenario.\+h@{scenario.\+h}!scenario\+\_\+t@{scenario\+\_\+t}}
 \index{scenario\+\_\+t@{scenario\+\_\+t}!scenario.\+h@{scenario.\+h}}
 \subsubsection[{\texorpdfstring{scenario\+\_\+t}{scenario\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf scenario\+\_\+t}  {\bf scenario\+\_\+t}}\hypertarget{scenario_8h_ab07060236e35010a55738843045d8bdf}{}\label{scenario_8h_ab07060236e35010a55738843045d8bdf}
-\index{scenario.\+h@{scenario.\+h}!zephyrjc\+\_\+t@{zephyrjc\+\_\+t}}
+
+
+A scenario. 
+
+This struct represent a scenario \index{scenario.\+h@{scenario.\+h}!zephyrjc\+\_\+t@{zephyrjc\+\_\+t}}
 \index{zephyrjc\+\_\+t@{zephyrjc\+\_\+t}!scenario.\+h@{scenario.\+h}}
 \subsubsection[{\texorpdfstring{zephyrjc\+\_\+t}{zephyrjc\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf zephyrjc\+\_\+t} {\bf zephyrjc\+\_\+t}}\hypertarget{scenario_8h_a52d3e7530da0906f5eb8b84c8a5a4c9a}{}\label{scenario_8h_a52d3e7530da0906f5eb8b84c8a5a4c9a}
 
@@ -56,6 +58,13 @@ void \hyperlink{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}{scenario\+\_\+add
 \item[{{\bf zephyrjc\+\_\+t} $\ast$}]{zjc}
 \end{DoxyParamCaption}
 )}\hypertarget{scenario_8h_a0d0640392b1532d98dfbdb9b23c2d346}{}\label{scenario_8h_a0d0640392b1532d98dfbdb9b23c2d346}
+Register a scenario in main engine. 
+\begin{DoxyParams}{Parameters}
+{\em scenario} & Scenario to register \\
+\hline
+{\em zjc} & Pointer to main engine \\
+\hline
+\end{DoxyParams}
 \index{scenario.\+h@{scenario.\+h}!scenario\+\_\+add\+\_\+object@{scenario\+\_\+add\+\_\+object}}
 \index{scenario\+\_\+add\+\_\+object@{scenario\+\_\+add\+\_\+object}!scenario.\+h@{scenario.\+h}}
 \subsubsection[{\texorpdfstring{scenario\+\_\+add\+\_\+object(scenario\+\_\+t $\ast$scenario, object\+\_\+t $\ast$obj)}{scenario\_add\_object(scenario\_t *scenario, object\_t *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void scenario\+\_\+add\+\_\+object (
@@ -64,13 +73,32 @@ void \hyperlink{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}{scenario\+\_\+add
 \item[{{\bf object\+\_\+t} $\ast$}]{obj}
 \end{DoxyParamCaption}
 )}\hypertarget{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}{}\label{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}
-\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+init@{scenario\+\_\+init}}
-\index{scenario\+\_\+init@{scenario\+\_\+init}!scenario.\+h@{scenario.\+h}}
-\subsubsection[{\texorpdfstring{scenario\+\_\+init(zephyrjc\+\_\+t $\ast$zjc)}{scenario\_init(zephyrjc\_t *zjc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf scenario\+\_\+t}$\ast$ scenario\+\_\+init (
+Register object in scenario
+
+
+\begin{DoxyParams}{Parameters}
+{\em scenario} & Scenario where the object will be added. \\
+\hline
+{\em obj} & Object to be registered. \\
+\hline
+\end{DoxyParams}
+\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+create@{scenario\+\_\+create}}
+\index{scenario\+\_\+create@{scenario\+\_\+create}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{scenario\+\_\+create(zephyrjc\+\_\+t $\ast$zjc)}{scenario\_create(zephyrjc\_t *zjc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf scenario\+\_\+t}$\ast$ scenario\+\_\+create (
 \begin{DoxyParamCaption}
 \item[{{\bf zephyrjc\+\_\+t} $\ast$}]{zjc}
 \end{DoxyParamCaption}
-)}\hypertarget{scenario_8h_a497aa3a1410aa240e5d556fa0ea63957}{}\label{scenario_8h_a497aa3a1410aa240e5d556fa0ea63957}
+)}\hypertarget{scenario_8h_a4ef72d482c0b5c22aad4663d382f9134}{}\label{scenario_8h_a4ef72d482c0b5c22aad4663d382f9134}
+Create a scenario
+
+
+\begin{DoxyParams}{Parameters}
+{\em zjc} & Pointer to main engine. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new scenario 
+\end{DoxyReturn}
 \index{scenario.\+h@{scenario.\+h}!scenario\+\_\+process@{scenario\+\_\+process}}
 \index{scenario\+\_\+process@{scenario\+\_\+process}!scenario.\+h@{scenario.\+h}}
 \subsubsection[{\texorpdfstring{scenario\+\_\+process(scenario\+\_\+t $\ast$scenario)}{scenario\_process(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void scenario\+\_\+process (
@@ -78,6 +106,11 @@ void \hyperlink{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}{scenario\+\_\+add
 \item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
 \end{DoxyParamCaption}
 )}\hypertarget{scenario_8h_ab238821cac952c6fab1dd57ef45dacd5}{}\label{scenario_8h_ab238821cac952c6fab1dd57ef45dacd5}
+Scenario process. Triggers E\+V\+\_\+\+U\+P\+D\+A\+TE event through event dispatcher. 
+\begin{DoxyParams}{Parameters}
+{\em scenario} & Scenario to trigger event \\
+\hline
+\end{DoxyParams}
 \index{scenario.\+h@{scenario.\+h}!scenario\+\_\+render@{scenario\+\_\+render}}
 \index{scenario\+\_\+render@{scenario\+\_\+render}!scenario.\+h@{scenario.\+h}}
 \subsubsection[{\texorpdfstring{scenario\+\_\+render(scenario\+\_\+t $\ast$scenario)}{scenario\_render(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void scenario\+\_\+render (
@@ -85,10 +118,8 @@ void \hyperlink{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}{scenario\+\_\+add
 \item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
 \end{DoxyParamCaption}
 )}\hypertarget{scenario_8h_a9ee5aadf4e172bca7f1553c5b9f791b7}{}\label{scenario_8h_a9ee5aadf4e172bca7f1553c5b9f791b7}
-\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+setup@{scenario\+\_\+setup}}
-\index{scenario\+\_\+setup@{scenario\+\_\+setup}!scenario.\+h@{scenario.\+h}}
-\subsubsection[{\texorpdfstring{scenario\+\_\+setup(scenario\+\_\+t $\ast$scenario)}{scenario\_setup(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void scenario\+\_\+setup (
-\begin{DoxyParamCaption}
-\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
-\end{DoxyParamCaption}
-)}\hypertarget{scenario_8h_a71ef727db8ef2bb22eb5d754700fbbd8}{}\label{scenario_8h_a71ef727db8ef2bb22eb5d754700fbbd8}
+Scenario render. Triggers E\+V\+\_\+\+R\+E\+N\+D\+ER event through event dispatcher. 
+\begin{DoxyParams}{Parameters}
+{\em scenario} & Scenario to trigger event \\
+\hline
+\end{DoxyParams}

@@ -2,6 +2,10 @@
 #define CORE_H
 #include "graphics.h"
 
+/**
+ * Core holder. To be implemented
+ */
+
 typedef struct core_t
 {
 	int dummy;

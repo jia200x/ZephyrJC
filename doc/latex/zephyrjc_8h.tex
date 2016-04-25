@@ -6,14 +6,14 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Zephyr\+JC main engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \hyperlink{structscenario__t}{scenario\+\_\+t} \hyperlink{zephyrjc_8h_a98942e88b4c36431a4d85c3f87d70ce7}{scenario\+\_\+t}
 \item 
 typedef struct \hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} \hyperlink{zephyrjc_8h_a5a1c4c0c40870229fecbf6f76b69631c}{zephyrjc\+\_\+t}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Zephyr\+JC main engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,6 +24,8 @@ void \hyperlink{zephyrjc_8h_a129cd3a39dc358d59384f3a372ea1ca0}{zephyrjc\+\_\+add
 void \hyperlink{zephyrjc_8h_aa5a17886238dd5aed6e1fe2a9d776325}{zephyrjc\+\_\+start} (\hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} $\ast$zjc)
 \item 
 void \hyperlink{zephyrjc_8h_aed0728f84bf691c1f38b0098255639d3}{zephyrjc\+\_\+init\+\_\+graphics} (\hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} $\ast$zjc, int width, int height, int bpp)
+\item 
+static void \hyperlink{zephyrjc_8h_a119b450d50a15d7fface2c9448c970fb}{zephyrjc\+\_\+set\+\_\+current\+\_\+scenario} (\hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} $\ast$zjc, \hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
 \end{DoxyCompactItemize}
 
 
@@ -36,6 +38,10 @@ void \hyperlink{zephyrjc_8h_aed0728f84bf691c1f38b0098255639d3}{zephyrjc\+\_\+ini
 \subsubsection[{\texorpdfstring{zephyrjc\+\_\+t}{zephyrjc\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf zephyrjc\+\_\+t}  {\bf zephyrjc\+\_\+t}}\hypertarget{zephyrjc_8h_a5a1c4c0c40870229fecbf6f76b69631c}{}\label{zephyrjc_8h_a5a1c4c0c40870229fecbf6f76b69631c}
 
 
+Zephyr\+JC main engine. 
+
+
+
 \subsection{Function Documentation}
 \index{zephyrjc.\+h@{zephyrjc.\+h}!zephyrjc\+\_\+add\+\_\+scenario@{zephyrjc\+\_\+add\+\_\+scenario}}
 \index{zephyrjc\+\_\+add\+\_\+scenario@{zephyrjc\+\_\+add\+\_\+scenario}!zephyrjc.\+h@{zephyrjc.\+h}}
@@ -45,6 +51,15 @@ void \hyperlink{zephyrjc_8h_aed0728f84bf691c1f38b0098255639d3}{zephyrjc\+\_\+ini
 \item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
 \end{DoxyParamCaption}
 )}\hypertarget{zephyrjc_8h_a129cd3a39dc358d59384f3a372ea1ca0}{}\label{zephyrjc_8h_a129cd3a39dc358d59384f3a372ea1ca0}
+Add scenario to engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em zjc} & Pointer to engine \\
+\hline
+{\em scenario} & Scenario to add \\
+\hline
+\end{DoxyParams}
 \index{zephyrjc.\+h@{zephyrjc.\+h}!zephyrjc\+\_\+init@{zephyrjc\+\_\+init}}
 \index{zephyrjc\+\_\+init@{zephyrjc\+\_\+init}!zephyrjc.\+h@{zephyrjc.\+h}}
 \subsubsection[{\texorpdfstring{zephyrjc\+\_\+init(void)}{zephyrjc\_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf zephyrjc\+\_\+t}$\ast$ zephyrjc\+\_\+init (
@@ -52,6 +67,11 @@ void \hyperlink{zephyrjc_8h_aed0728f84bf691c1f38b0098255639d3}{zephyrjc\+\_\+ini
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\hypertarget{zephyrjc_8h_a8f1bf8ef2fad9d3f76eb1edb156a6ff4}{}\label{zephyrjc_8h_a8f1bf8ef2fad9d3f76eb1edb156a6ff4}
+Init engine
+
+\begin{DoxyReturn}{Returns}
+Pointer to engine 
+\end{DoxyReturn}
 \index{zephyrjc.\+h@{zephyrjc.\+h}!zephyrjc\+\_\+init\+\_\+graphics@{zephyrjc\+\_\+init\+\_\+graphics}}
 \index{zephyrjc\+\_\+init\+\_\+graphics@{zephyrjc\+\_\+init\+\_\+graphics}!zephyrjc.\+h@{zephyrjc.\+h}}
 \subsubsection[{\texorpdfstring{zephyrjc\+\_\+init\+\_\+graphics(zephyrjc\+\_\+t $\ast$zjc, int width, int height, int bpp)}{zephyrjc\_init\_graphics(zephyrjc\_t *zjc, int width, int height, int bpp)}}]{\setlength{\rightskip}{0pt plus 5cm}void zephyrjc\+\_\+init\+\_\+graphics (
@@ -62,6 +82,34 @@ void \hyperlink{zephyrjc_8h_aed0728f84bf691c1f38b0098255639d3}{zephyrjc\+\_\+ini
 \item[{int}]{bpp}
 \end{DoxyParamCaption}
 )}\hypertarget{zephyrjc_8h_aed0728f84bf691c1f38b0098255639d3}{}\label{zephyrjc_8h_aed0728f84bf691c1f38b0098255639d3}
+Init graphics.
+
+
+\begin{DoxyParams}{Parameters}
+{\em zjc} & Pointer to engine \\
+\hline
+{\em width} & Width of screen \\
+\hline
+{\em height} & Height of screen  Bpp of screen \\
+\hline
+\end{DoxyParams}
+\index{zephyrjc.\+h@{zephyrjc.\+h}!zephyrjc\+\_\+set\+\_\+current\+\_\+scenario@{zephyrjc\+\_\+set\+\_\+current\+\_\+scenario}}
+\index{zephyrjc\+\_\+set\+\_\+current\+\_\+scenario@{zephyrjc\+\_\+set\+\_\+current\+\_\+scenario}!zephyrjc.\+h@{zephyrjc.\+h}}
+\subsubsection[{\texorpdfstring{zephyrjc\+\_\+set\+\_\+current\+\_\+scenario(zephyrjc\+\_\+t $\ast$zjc, scenario\+\_\+t $\ast$scenario)}{zephyrjc\_set\_current\_scenario(zephyrjc\_t *zjc, scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}static void zephyrjc\+\_\+set\+\_\+current\+\_\+scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf zephyrjc\+\_\+t} $\ast$}]{zjc, }
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{zephyrjc_8h_a119b450d50a15d7fface2c9448c970fb}{}\label{zephyrjc_8h_a119b450d50a15d7fface2c9448c970fb}
+Set the current scenario
+
+
+\begin{DoxyParams}{Parameters}
+{\em zjc} & Pointer to engine \\
+\hline
+{\em scenario} & Scenario to set as current \\
+\hline
+\end{DoxyParams}
 \index{zephyrjc.\+h@{zephyrjc.\+h}!zephyrjc\+\_\+start@{zephyrjc\+\_\+start}}
 \index{zephyrjc\+\_\+start@{zephyrjc\+\_\+start}!zephyrjc.\+h@{zephyrjc.\+h}}
 \subsubsection[{\texorpdfstring{zephyrjc\+\_\+start(zephyrjc\+\_\+t $\ast$zjc)}{zephyrjc\_start(zephyrjc\_t *zjc)}}]{\setlength{\rightskip}{0pt plus 5cm}void zephyrjc\+\_\+start (
@@ -69,3 +117,10 @@ void \hyperlink{zephyrjc_8h_aed0728f84bf691c1f38b0098255639d3}{zephyrjc\+\_\+ini
 \item[{{\bf zephyrjc\+\_\+t} $\ast$}]{zjc}
 \end{DoxyParamCaption}
 )}\hypertarget{zephyrjc_8h_aa5a17886238dd5aed6e1fe2a9d776325}{}\label{zephyrjc_8h_aa5a17886238dd5aed6e1fe2a9d776325}
+Start the engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em zjc} & Pointer to engine \\
+\hline
+\end{DoxyParams}

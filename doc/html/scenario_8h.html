@@ -103,6 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscenario__t.html">scenario_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A scenario.  <a href="structscenario__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -112,14 +113,13 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a52d3e7530da0906f5eb8b84c8a5a4c9a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structzephyrjc__t.html">zephyrjc_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scenario_8h.html#a52d3e7530da0906f5eb8b84c8a5a4c9a">zephyrjc_t</a></td></tr>
 <tr class="separator:a52d3e7530da0906f5eb8b84c8a5a4c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab07060236e35010a55738843045d8bdf"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structscenario__t.html">scenario_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scenario_8h.html#ab07060236e35010a55738843045d8bdf">scenario_t</a></td></tr>
+<tr class="memdesc:ab07060236e35010a55738843045d8bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A scenario.  <a href="#ab07060236e35010a55738843045d8bdf">More...</a><br /></td></tr>
 <tr class="separator:ab07060236e35010a55738843045d8bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a497aa3a1410aa240e5d556fa0ea63957"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structscenario__t.html">scenario_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scenario_8h.html#a497aa3a1410aa240e5d556fa0ea63957">scenario_init</a> (<a class="el" href="structzephyrjc__t.html">zephyrjc_t</a> *zjc)</td></tr>
-<tr class="separator:a497aa3a1410aa240e5d556fa0ea63957"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71ef727db8ef2bb22eb5d754700fbbd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scenario_8h.html#a71ef727db8ef2bb22eb5d754700fbbd8">scenario_setup</a> (<a class="el" href="structscenario__t.html">scenario_t</a> *scenario)</td></tr>
-<tr class="separator:a71ef727db8ef2bb22eb5d754700fbbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ef72d482c0b5c22aad4663d382f9134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structscenario__t.html">scenario_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scenario_8h.html#a4ef72d482c0b5c22aad4663d382f9134">scenario_create</a> (<a class="el" href="structzephyrjc__t.html">zephyrjc_t</a> *zjc)</td></tr>
+<tr class="separator:a4ef72d482c0b5c22aad4663d382f9134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab238821cac952c6fab1dd57ef45dacd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scenario_8h.html#ab238821cac952c6fab1dd57ef45dacd5">scenario_process</a> (<a class="el" href="structscenario__t.html">scenario_t</a> *scenario)</td></tr>
 <tr class="separator:ab238821cac952c6fab1dd57ef45dacd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ee5aadf4e172bca7f1553c5b9f791b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scenario_8h.html#a9ee5aadf4e172bca7f1553c5b9f791b7">scenario_render</a> (<a class="el" href="structscenario__t.html">scenario_t</a> *scenario)</td></tr>
@@ -151,6 +151,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>A scenario. </p>
+<p>This struct represent a scenario </p>
 
 </div>
 </div>
@@ -190,6 +193,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Register a scenario in main engine. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scenario</td><td>Scenario to register </td></tr>
+    <tr><td class="paramname">zjc</td><td>Pointer to main engine </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -216,15 +226,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Register object in scenario</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scenario</td><td>Scenario where the object will be added. </td></tr>
+    <tr><td class="paramname">obj</td><td>Object to be registered. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="a497aa3a1410aa240e5d556fa0ea63957"></a>
+<a class="anchor" id="a4ef72d482c0b5c22aad4663d382f9134"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structscenario__t.html">scenario_t</a>* scenario_init </td>
+          <td class="memname"><a class="el" href="structscenario__t.html">scenario_t</a>* scenario_create </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structzephyrjc__t.html">zephyrjc_t</a> *&#160;</td>
           <td class="paramname"><em>zjc</em></td><td>)</td>
@@ -232,6 +250,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Create a scenario</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zjc</td><td>Pointer to main engine. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new scenario </dd></dl>
 
 </div>
 </div>
@@ -248,6 +274,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Scenario process. Triggers EV_UPDATE event through event dispatcher. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scenario</td><td>Scenario to trigger event </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -264,22 +296,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a71ef727db8ef2bb22eb5d754700fbbd8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void scenario_setup </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structscenario__t.html">scenario_t</a> *&#160;</td>
-          <td class="paramname"><em>scenario</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Scenario render. Triggers EV_RENDER event through event dispatcher. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scenario</td><td>Scenario to trigger event </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
