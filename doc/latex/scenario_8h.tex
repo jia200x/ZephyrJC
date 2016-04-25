@@ -1,0 +1,94 @@
+\hypertarget{scenario_8h}{}\section{include/scenario.h File Reference}
+\label{scenario_8h}\index{include/scenario.\+h@{include/scenario.\+h}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}sys.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}eventdispatcher.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structscenario__t}{scenario\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structobject__t}{object\+\_\+t} \hyperlink{scenario_8h_a27555b6a6718dd529daf3f8acd554745}{object\+\_\+t}
+\item 
+typedef struct \hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} \hyperlink{scenario_8h_a52d3e7530da0906f5eb8b84c8a5a4c9a}{zephyrjc\+\_\+t}
+\item 
+typedef struct \hyperlink{structscenario__t}{scenario\+\_\+t} \hyperlink{scenario_8h_ab07060236e35010a55738843045d8bdf}{scenario\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$ \hyperlink{scenario_8h_a497aa3a1410aa240e5d556fa0ea63957}{scenario\+\_\+init} (\hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} $\ast$zjc)
+\item 
+void \hyperlink{scenario_8h_a71ef727db8ef2bb22eb5d754700fbbd8}{scenario\+\_\+setup} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\item 
+void \hyperlink{scenario_8h_ab238821cac952c6fab1dd57ef45dacd5}{scenario\+\_\+process} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\item 
+void \hyperlink{scenario_8h_a9ee5aadf4e172bca7f1553c5b9f791b7}{scenario\+\_\+render} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\item 
+void \hyperlink{scenario_8h_a0d0640392b1532d98dfbdb9b23c2d346}{register\+\_\+scenario} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario, \hyperlink{structzephyrjc__t}{zephyrjc\+\_\+t} $\ast$zjc)
+\item 
+void \hyperlink{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}{scenario\+\_\+add\+\_\+object} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario, \hyperlink{structobject__t}{object\+\_\+t} $\ast$obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{scenario.\+h@{scenario.\+h}!object\+\_\+t@{object\+\_\+t}}
+\index{object\+\_\+t@{object\+\_\+t}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{object\+\_\+t}{object\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf object\+\_\+t} {\bf object\+\_\+t}}\hypertarget{scenario_8h_a27555b6a6718dd529daf3f8acd554745}{}\label{scenario_8h_a27555b6a6718dd529daf3f8acd554745}
+\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+t@{scenario\+\_\+t}}
+\index{scenario\+\_\+t@{scenario\+\_\+t}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{scenario\+\_\+t}{scenario\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf scenario\+\_\+t}  {\bf scenario\+\_\+t}}\hypertarget{scenario_8h_ab07060236e35010a55738843045d8bdf}{}\label{scenario_8h_ab07060236e35010a55738843045d8bdf}
+\index{scenario.\+h@{scenario.\+h}!zephyrjc\+\_\+t@{zephyrjc\+\_\+t}}
+\index{zephyrjc\+\_\+t@{zephyrjc\+\_\+t}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{zephyrjc\+\_\+t}{zephyrjc\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf zephyrjc\+\_\+t} {\bf zephyrjc\+\_\+t}}\hypertarget{scenario_8h_a52d3e7530da0906f5eb8b84c8a5a4c9a}{}\label{scenario_8h_a52d3e7530da0906f5eb8b84c8a5a4c9a}
+
+
+\subsection{Function Documentation}
+\index{scenario.\+h@{scenario.\+h}!register\+\_\+scenario@{register\+\_\+scenario}}
+\index{register\+\_\+scenario@{register\+\_\+scenario}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{register\+\_\+scenario(scenario\+\_\+t $\ast$scenario, zephyrjc\+\_\+t $\ast$zjc)}{register\_scenario(scenario\_t *scenario, zephyrjc\_t *zjc)}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+\_\+scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario, }
+\item[{{\bf zephyrjc\+\_\+t} $\ast$}]{zjc}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario_8h_a0d0640392b1532d98dfbdb9b23c2d346}{}\label{scenario_8h_a0d0640392b1532d98dfbdb9b23c2d346}
+\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+add\+\_\+object@{scenario\+\_\+add\+\_\+object}}
+\index{scenario\+\_\+add\+\_\+object@{scenario\+\_\+add\+\_\+object}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{scenario\+\_\+add\+\_\+object(scenario\+\_\+t $\ast$scenario, object\+\_\+t $\ast$obj)}{scenario\_add\_object(scenario\_t *scenario, object\_t *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void scenario\+\_\+add\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario, }
+\item[{{\bf object\+\_\+t} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}{}\label{scenario_8h_a58aa1b8e51cf1eee57f4aa213b8344d9}
+\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+init@{scenario\+\_\+init}}
+\index{scenario\+\_\+init@{scenario\+\_\+init}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{scenario\+\_\+init(zephyrjc\+\_\+t $\ast$zjc)}{scenario\_init(zephyrjc\_t *zjc)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf scenario\+\_\+t}$\ast$ scenario\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf zephyrjc\+\_\+t} $\ast$}]{zjc}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario_8h_a497aa3a1410aa240e5d556fa0ea63957}{}\label{scenario_8h_a497aa3a1410aa240e5d556fa0ea63957}
+\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+process@{scenario\+\_\+process}}
+\index{scenario\+\_\+process@{scenario\+\_\+process}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{scenario\+\_\+process(scenario\+\_\+t $\ast$scenario)}{scenario\_process(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void scenario\+\_\+process (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario_8h_ab238821cac952c6fab1dd57ef45dacd5}{}\label{scenario_8h_ab238821cac952c6fab1dd57ef45dacd5}
+\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+render@{scenario\+\_\+render}}
+\index{scenario\+\_\+render@{scenario\+\_\+render}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{scenario\+\_\+render(scenario\+\_\+t $\ast$scenario)}{scenario\_render(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void scenario\+\_\+render (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario_8h_a9ee5aadf4e172bca7f1553c5b9f791b7}{}\label{scenario_8h_a9ee5aadf4e172bca7f1553c5b9f791b7}
+\index{scenario.\+h@{scenario.\+h}!scenario\+\_\+setup@{scenario\+\_\+setup}}
+\index{scenario\+\_\+setup@{scenario\+\_\+setup}!scenario.\+h@{scenario.\+h}}
+\subsubsection[{\texorpdfstring{scenario\+\_\+setup(scenario\+\_\+t $\ast$scenario)}{scenario\_setup(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void scenario\+\_\+setup (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario_8h_a71ef727db8ef2bb22eb5d754700fbbd8}{}\label{scenario_8h_a71ef727db8ef2bb22eb5d754700fbbd8}

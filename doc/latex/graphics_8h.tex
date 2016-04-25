@@ -1,0 +1,119 @@
+\hypertarget{graphics_8h}{}\section{include/graphics.h File Reference}
+\label{graphics_8h}\index{include/graphics.\+h@{include/graphics.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsprite_buffer__t}{sprite\+Buffer\+\_\+t}
+\item 
+struct \hyperlink{structcolor__t}{color\+\_\+t}
+\item 
+struct \hyperlink{structrect__t}{rect\+\_\+t}
+\item 
+struct \hyperlink{structgraphics__t}{graphics\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structsprite_buffer__t}{sprite\+Buffer\+\_\+t} \hyperlink{graphics_8h_adcdbefff4bd5ccc6d294a43b45d8e713}{sprite\+Buffer\+\_\+t}
+\item 
+typedef struct \hyperlink{structcolor__t}{color\+\_\+t} \hyperlink{graphics_8h_a0ab832cb1976fa552f7ae0b53abe157c}{color\+\_\+t}
+\item 
+typedef struct \hyperlink{structrect__t}{rect\+\_\+t} \hyperlink{graphics_8h_a7cbc65ba1cf59e9aeef3a25fcb9a1a78}{rect\+\_\+t}
+\item 
+typedef struct \hyperlink{structgraphics__t}{graphics\+\_\+t} \hyperlink{graphics_8h_abe6e9eceeefbe5d9c0a1f0382937c8f6}{graphics\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{graphics_8h_a2374826f2f9d7c4485b2dcf54ea21d79}{graphics\+\_\+init} (\hyperlink{structgraphics__t}{graphics\+\_\+t} $\ast$graphics, int width, int height, int bpp, void $\ast$args)
+\item 
+void \hyperlink{graphics_8h_a00dbf7c7a2abeaa74cf44b01c709087a}{load\+\_\+bmp} (\hyperlink{structsprite_buffer__t}{sprite\+Buffer\+\_\+t} $\ast$sprite, char $\ast$filename)
+\item 
+int \hyperlink{graphics_8h_ad2d11208f449ef0711d0731ae0016ae0}{blit} (\hyperlink{structsprite_buffer__t}{sprite\+Buffer\+\_\+t} $\ast$source, \hyperlink{structsprite_buffer__t}{sprite\+Buffer\+\_\+t} $\ast$dest, \hyperlink{structrect__t}{rect\+\_\+t} $\ast$rsrc, \hyperlink{structrect__t}{rect\+\_\+t} $\ast$rdst)
+\item 
+void \hyperlink{graphics_8h_a56b8c1ba8ac54de37ce0d9278e8ac9f5}{screen\+\_\+fill} (\hyperlink{structsprite_buffer__t}{sprite\+Buffer\+\_\+t} $\ast$buffer, \hyperlink{structcolor__t}{color\+\_\+t} $\ast$color)
+\item 
+\hyperlink{structsprite_buffer__t}{sprite\+Buffer\+\_\+t} $\ast$ \hyperlink{graphics_8h_ad8acc484e947a35392da6642c1b8c20a}{create\+\_\+sprite} (void)
+\item 
+void \hyperlink{graphics_8h_a069c36b129c2a7d37dcc730a7ff343b3}{screen\+\_\+update} (\hyperlink{structgraphics__t}{graphics\+\_\+t} $\ast$graphics)
+\item 
+void \hyperlink{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{graphics\+\_\+free} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{graphics.\+h@{graphics.\+h}!color\+\_\+t@{color\+\_\+t}}
+\index{color\+\_\+t@{color\+\_\+t}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{color\+\_\+t}{color\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf color\+\_\+t}  {\bf color\+\_\+t}}\hypertarget{graphics_8h_a0ab832cb1976fa552f7ae0b53abe157c}{}\label{graphics_8h_a0ab832cb1976fa552f7ae0b53abe157c}
+\index{graphics.\+h@{graphics.\+h}!graphics\+\_\+t@{graphics\+\_\+t}}
+\index{graphics\+\_\+t@{graphics\+\_\+t}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{graphics\+\_\+t}{graphics\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf graphics\+\_\+t}  {\bf graphics\+\_\+t}}\hypertarget{graphics_8h_abe6e9eceeefbe5d9c0a1f0382937c8f6}{}\label{graphics_8h_abe6e9eceeefbe5d9c0a1f0382937c8f6}
+\index{graphics.\+h@{graphics.\+h}!rect\+\_\+t@{rect\+\_\+t}}
+\index{rect\+\_\+t@{rect\+\_\+t}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{rect\+\_\+t}{rect\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf rect\+\_\+t}  {\bf rect\+\_\+t}}\hypertarget{graphics_8h_a7cbc65ba1cf59e9aeef3a25fcb9a1a78}{}\label{graphics_8h_a7cbc65ba1cf59e9aeef3a25fcb9a1a78}
+\index{graphics.\+h@{graphics.\+h}!sprite\+Buffer\+\_\+t@{sprite\+Buffer\+\_\+t}}
+\index{sprite\+Buffer\+\_\+t@{sprite\+Buffer\+\_\+t}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{sprite\+Buffer\+\_\+t}{spriteBuffer\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf sprite\+Buffer\+\_\+t}  {\bf sprite\+Buffer\+\_\+t}}\hypertarget{graphics_8h_adcdbefff4bd5ccc6d294a43b45d8e713}{}\label{graphics_8h_adcdbefff4bd5ccc6d294a43b45d8e713}
+
+
+\subsection{Function Documentation}
+\index{graphics.\+h@{graphics.\+h}!blit@{blit}}
+\index{blit@{blit}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{blit(sprite\+Buffer\+\_\+t $\ast$source, sprite\+Buffer\+\_\+t $\ast$dest, rect\+\_\+t $\ast$rsrc, rect\+\_\+t $\ast$rdst)}{blit(spriteBuffer\_t *source, spriteBuffer\_t *dest, rect\_t *rsrc, rect\_t *rdst)}}]{\setlength{\rightskip}{0pt plus 5cm}int blit (
+\begin{DoxyParamCaption}
+\item[{{\bf sprite\+Buffer\+\_\+t} $\ast$}]{source, }
+\item[{{\bf sprite\+Buffer\+\_\+t} $\ast$}]{dest, }
+\item[{{\bf rect\+\_\+t} $\ast$}]{rsrc, }
+\item[{{\bf rect\+\_\+t} $\ast$}]{rdst}
+\end{DoxyParamCaption}
+)}\hypertarget{graphics_8h_ad2d11208f449ef0711d0731ae0016ae0}{}\label{graphics_8h_ad2d11208f449ef0711d0731ae0016ae0}
+\index{graphics.\+h@{graphics.\+h}!create\+\_\+sprite@{create\+\_\+sprite}}
+\index{create\+\_\+sprite@{create\+\_\+sprite}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{create\+\_\+sprite(void)}{create\_sprite(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sprite\+Buffer\+\_\+t}$\ast$ create\+\_\+sprite (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{graphics_8h_ad8acc484e947a35392da6642c1b8c20a}{}\label{graphics_8h_ad8acc484e947a35392da6642c1b8c20a}
+\index{graphics.\+h@{graphics.\+h}!graphics\+\_\+free@{graphics\+\_\+free}}
+\index{graphics\+\_\+free@{graphics\+\_\+free}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{graphics\+\_\+free(void)}{graphics\_free(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void graphics\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}{}\label{graphics_8h_a86f0fbded7e25c5b1b35833a97e06283}
+\index{graphics.\+h@{graphics.\+h}!graphics\+\_\+init@{graphics\+\_\+init}}
+\index{graphics\+\_\+init@{graphics\+\_\+init}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{graphics\+\_\+init(graphics\+\_\+t $\ast$graphics, int width, int height, int bpp, void $\ast$args)}{graphics\_init(graphics\_t *graphics, int width, int height, int bpp, void *args)}}]{\setlength{\rightskip}{0pt plus 5cm}void graphics\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf graphics\+\_\+t} $\ast$}]{graphics, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{bpp, }
+\item[{void $\ast$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{graphics_8h_a2374826f2f9d7c4485b2dcf54ea21d79}{}\label{graphics_8h_a2374826f2f9d7c4485b2dcf54ea21d79}
+\index{graphics.\+h@{graphics.\+h}!load\+\_\+bmp@{load\+\_\+bmp}}
+\index{load\+\_\+bmp@{load\+\_\+bmp}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{load\+\_\+bmp(sprite\+Buffer\+\_\+t $\ast$sprite, char $\ast$filename)}{load\_bmp(spriteBuffer\_t *sprite, char *filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void load\+\_\+bmp (
+\begin{DoxyParamCaption}
+\item[{{\bf sprite\+Buffer\+\_\+t} $\ast$}]{sprite, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{graphics_8h_a00dbf7c7a2abeaa74cf44b01c709087a}{}\label{graphics_8h_a00dbf7c7a2abeaa74cf44b01c709087a}
+\index{graphics.\+h@{graphics.\+h}!screen\+\_\+fill@{screen\+\_\+fill}}
+\index{screen\+\_\+fill@{screen\+\_\+fill}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{screen\+\_\+fill(sprite\+Buffer\+\_\+t $\ast$buffer, color\+\_\+t $\ast$color)}{screen\_fill(spriteBuffer\_t *buffer, color\_t *color)}}]{\setlength{\rightskip}{0pt plus 5cm}void screen\+\_\+fill (
+\begin{DoxyParamCaption}
+\item[{{\bf sprite\+Buffer\+\_\+t} $\ast$}]{buffer, }
+\item[{{\bf color\+\_\+t} $\ast$}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{graphics_8h_a56b8c1ba8ac54de37ce0d9278e8ac9f5}{}\label{graphics_8h_a56b8c1ba8ac54de37ce0d9278e8ac9f5}
+\index{graphics.\+h@{graphics.\+h}!screen\+\_\+update@{screen\+\_\+update}}
+\index{screen\+\_\+update@{screen\+\_\+update}!graphics.\+h@{graphics.\+h}}
+\subsubsection[{\texorpdfstring{screen\+\_\+update(graphics\+\_\+t $\ast$graphics)}{screen\_update(graphics\_t *graphics)}}]{\setlength{\rightskip}{0pt plus 5cm}void screen\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{{\bf graphics\+\_\+t} $\ast$}]{graphics}
+\end{DoxyParamCaption}
+)}\hypertarget{graphics_8h_a069c36b129c2a7d37dcc730a7ff343b3}{}\label{graphics_8h_a069c36b129c2a7d37dcc730a7ff343b3}

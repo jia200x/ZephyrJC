@@ -5,7 +5,6 @@ OBJECTS = zephyrjc.o zephyrjc_main.o graphics_sdl.o sprite.o transform.o eventdi
 CFLAGS = -Iinclude -g -Wall
 
 SRC = $(wildcard *.c) $(wildcard game/*.c) $(wildcard game/*/*.c) $(wildcard core/*.c) $(wildcard core/*/*.c)
-$(info $(SRC))
 
 ifeq ($(UNAME), Darwin)
 LDFLAGS = -framework SDL2 -framework SDL2_image
@@ -20,6 +19,10 @@ $(TARGET): build
 	gcc $(CFLAGS) $(LDFLAGS) $(SRC) -o $(FOLDER)/$(TARGET)
 
 all: $(TARGET)
+
+.PHONY: doc
+doc:
+	doxygen zephyrjc
 
 build:
 	mkdir -p $(FOLDER)

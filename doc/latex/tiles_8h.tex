@@ -1,0 +1,87 @@
+\hypertarget{tiles_8h}{}\section{include/tiles.h File Reference}
+\label{tiles_8h}\index{include/tiles.\+h@{include/tiles.\+h}}
+{\ttfamily \#include \char`\"{}core.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}component.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtilepool__t}{tilepool\+\_\+t}
+\item 
+struct \hyperlink{structtilemap__t}{tilemap\+\_\+t}
+\item 
+struct \hyperlink{structtileengine__t}{tileengine\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structtilepool__t}{tilepool\+\_\+t} \hyperlink{tiles_8h_afe037836be3e5fcad140547e80e685bc}{tilepool\+\_\+t}
+\item 
+typedef struct \hyperlink{structtilemap__t}{tilemap\+\_\+t} \hyperlink{tiles_8h_a1494a3b9e2ecf57e9352c757197d4551}{tilemap\+\_\+t}
+\item 
+typedef struct \hyperlink{structtileengine__t}{tileengine\+\_\+t} \hyperlink{tiles_8h_af2a3627c81c006fce3f094e577ead458}{tileengine\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{tiles_8h_a100a2beac974bc39b1328d3607f6cd89}{tileengine\+\_\+init} (\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$c, void $\ast$$\ast$args)
+\item 
+void \hyperlink{tiles_8h_a6f731521b9acc42faea525ba8952da9c}{tileengine\+\_\+render} (void $\ast$component, void $\ast$args)
+\item 
+\hyperlink{structtilepool__t}{tilepool\+\_\+t} $\ast$ \hyperlink{tiles_8h_a92619b3151662307121f853be662213a}{create\+\_\+tilepool} (char $\ast$filename, uint16\+\_\+t tw, uint16\+\_\+t th, uint16\+\_\+t xoff, uint16\+\_\+t yoff)
+\item 
+\hyperlink{structtilemap__t}{tilemap\+\_\+t} $\ast$ \hyperlink{tiles_8h_a8209facc63fd7cc8ad2604e1f6e318ce}{create\+\_\+tilemap} (\hyperlink{structtilepool__t}{tilepool\+\_\+t} $\ast$pool, uint16\+\_\+t $\ast$tilestruct, int size\+\_\+x, int size\+\_\+y, uint8\+\_\+t depth)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{tiles.\+h@{tiles.\+h}!tileengine\+\_\+t@{tileengine\+\_\+t}}
+\index{tileengine\+\_\+t@{tileengine\+\_\+t}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{tileengine\+\_\+t}{tileengine\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tileengine\+\_\+t}  {\bf tileengine\+\_\+t}}\hypertarget{tiles_8h_af2a3627c81c006fce3f094e577ead458}{}\label{tiles_8h_af2a3627c81c006fce3f094e577ead458}
+\index{tiles.\+h@{tiles.\+h}!tilemap\+\_\+t@{tilemap\+\_\+t}}
+\index{tilemap\+\_\+t@{tilemap\+\_\+t}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{tilemap\+\_\+t}{tilemap\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tilemap\+\_\+t}  {\bf tilemap\+\_\+t}}\hypertarget{tiles_8h_a1494a3b9e2ecf57e9352c757197d4551}{}\label{tiles_8h_a1494a3b9e2ecf57e9352c757197d4551}
+\index{tiles.\+h@{tiles.\+h}!tilepool\+\_\+t@{tilepool\+\_\+t}}
+\index{tilepool\+\_\+t@{tilepool\+\_\+t}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{tilepool\+\_\+t}{tilepool\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tilepool\+\_\+t}  {\bf tilepool\+\_\+t}}\hypertarget{tiles_8h_afe037836be3e5fcad140547e80e685bc}{}\label{tiles_8h_afe037836be3e5fcad140547e80e685bc}
+
+
+\subsection{Function Documentation}
+\index{tiles.\+h@{tiles.\+h}!create\+\_\+tilemap@{create\+\_\+tilemap}}
+\index{create\+\_\+tilemap@{create\+\_\+tilemap}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{create\+\_\+tilemap(tilepool\+\_\+t $\ast$pool, uint16\+\_\+t $\ast$tilestruct, int size\+\_\+x, int size\+\_\+y, uint8\+\_\+t depth)}{create\_tilemap(tilepool\_t *pool, uint16\_t *tilestruct, int size\_x, int size\_y, uint8\_t depth)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tilemap\+\_\+t}$\ast$ create\+\_\+tilemap (
+\begin{DoxyParamCaption}
+\item[{{\bf tilepool\+\_\+t} $\ast$}]{pool, }
+\item[{uint16\+\_\+t $\ast$}]{tilestruct, }
+\item[{int}]{size\+\_\+x, }
+\item[{int}]{size\+\_\+y, }
+\item[{uint8\+\_\+t}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{tiles_8h_a8209facc63fd7cc8ad2604e1f6e318ce}{}\label{tiles_8h_a8209facc63fd7cc8ad2604e1f6e318ce}
+\index{tiles.\+h@{tiles.\+h}!create\+\_\+tilepool@{create\+\_\+tilepool}}
+\index{create\+\_\+tilepool@{create\+\_\+tilepool}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{create\+\_\+tilepool(char $\ast$filename, uint16\+\_\+t tw, uint16\+\_\+t th, uint16\+\_\+t xoff, uint16\+\_\+t yoff)}{create\_tilepool(char *filename, uint16\_t tw, uint16\_t th, uint16\_t xoff, uint16\_t yoff)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tilepool\+\_\+t}$\ast$ create\+\_\+tilepool (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{uint16\+\_\+t}]{tw, }
+\item[{uint16\+\_\+t}]{th, }
+\item[{uint16\+\_\+t}]{xoff, }
+\item[{uint16\+\_\+t}]{yoff}
+\end{DoxyParamCaption}
+)}\hypertarget{tiles_8h_a92619b3151662307121f853be662213a}{}\label{tiles_8h_a92619b3151662307121f853be662213a}
+\index{tiles.\+h@{tiles.\+h}!tileengine\+\_\+init@{tileengine\+\_\+init}}
+\index{tileengine\+\_\+init@{tileengine\+\_\+init}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{tileengine\+\_\+init(component\+\_\+t $\ast$c, void $\ast$$\ast$args)}{tileengine\_init(component\_t *c, void **args)}}]{\setlength{\rightskip}{0pt plus 5cm}void tileengine\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf component\+\_\+t} $\ast$}]{c, }
+\item[{void $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{tiles_8h_a100a2beac974bc39b1328d3607f6cd89}{}\label{tiles_8h_a100a2beac974bc39b1328d3607f6cd89}
+\index{tiles.\+h@{tiles.\+h}!tileengine\+\_\+render@{tileengine\+\_\+render}}
+\index{tileengine\+\_\+render@{tileengine\+\_\+render}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{tileengine\+\_\+render(void $\ast$component, void $\ast$args)}{tileengine\_render(void *component, void *args)}}]{\setlength{\rightskip}{0pt plus 5cm}void tileengine\+\_\+render (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{component, }
+\item[{void $\ast$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{tiles_8h_a6f731521b9acc42faea525ba8952da9c}{}\label{tiles_8h_a6f731521b9acc42faea525ba8952da9c}

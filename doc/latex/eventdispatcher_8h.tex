@@ -1,0 +1,88 @@
+\hypertarget{eventdispatcher_8h}{}\section{include/eventdispatcher.h File Reference}
+\label{eventdispatcher_8h}\index{include/eventdispatcher.\+h@{include/eventdispatcher.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structevent__container__t}{event\+\_\+container\+\_\+t}
+\item 
+struct \hyperlink{structevent__dispatcher__t}{event\+\_\+dispatcher\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structevent__container__t}{event\+\_\+container\+\_\+t} \hyperlink{eventdispatcher_8h_a1ba2c3c7d598b1c9f3dba9c9b6f67390}{event\+\_\+container\+\_\+t}
+\item 
+typedef struct \hyperlink{structevent__dispatcher__t}{event\+\_\+dispatcher\+\_\+t} \hyperlink{eventdispatcher_8h_aad6d78bd673db9e5b757df224653d1a8}{event\+\_\+dispatcher\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8}{event\+\_\+t} \{ \hyperlink{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8aa3f01dece20e06860f3c92b89f8b0553}{E\+V\+\_\+\+U\+P\+D\+A\+TE}, 
+\hyperlink{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8afd0fb29dc22e812d7648306af562e6ed}{E\+V\+\_\+\+R\+E\+N\+D\+ER}, 
+\hyperlink{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8a47f5fbee1bafda11f2f514e688f146c8}{E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{eventdispatcher_8h_a65b0e821319e4bfeda30b2a1c0b37951}{event\+\_\+dispatcher\+\_\+init} (\hyperlink{structevent__dispatcher__t}{event\+\_\+dispatcher\+\_\+t} $\ast$ed)
+\item 
+int \hyperlink{eventdispatcher_8h_aaed30c53570e0e1ef66a5a4e66bf453b}{dispatch\+\_\+event} (\hyperlink{structevent__dispatcher__t}{event\+\_\+dispatcher\+\_\+t} $\ast$ed, int event, void $\ast$args)
+\item 
+int \hyperlink{eventdispatcher_8h_a460184b297e545152cf25121ec607254}{register\+\_\+event\+\_\+callback} (\hyperlink{structevent__dispatcher__t}{event\+\_\+dispatcher\+\_\+t} $\ast$ed, int event, void $\ast$target, void($\ast$func)(void $\ast$target, void $\ast$args))
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+container\+\_\+t@{event\+\_\+container\+\_\+t}}
+\index{event\+\_\+container\+\_\+t@{event\+\_\+container\+\_\+t}!eventdispatcher.\+h@{eventdispatcher.\+h}}
+\subsubsection[{\texorpdfstring{event\+\_\+container\+\_\+t}{event\_container\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf event\+\_\+container\+\_\+t}  {\bf event\+\_\+container\+\_\+t}}\hypertarget{eventdispatcher_8h_a1ba2c3c7d598b1c9f3dba9c9b6f67390}{}\label{eventdispatcher_8h_a1ba2c3c7d598b1c9f3dba9c9b6f67390}
+\index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+dispatcher\+\_\+t@{event\+\_\+dispatcher\+\_\+t}}
+\index{event\+\_\+dispatcher\+\_\+t@{event\+\_\+dispatcher\+\_\+t}!eventdispatcher.\+h@{eventdispatcher.\+h}}
+\subsubsection[{\texorpdfstring{event\+\_\+dispatcher\+\_\+t}{event\_dispatcher\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf event\+\_\+dispatcher\+\_\+t}  {\bf event\+\_\+dispatcher\+\_\+t}}\hypertarget{eventdispatcher_8h_aad6d78bd673db9e5b757df224653d1a8}{}\label{eventdispatcher_8h_aad6d78bd673db9e5b757df224653d1a8}
+
+
+\subsection{Enumeration Type Documentation}
+\index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+t@{event\+\_\+t}}
+\index{event\+\_\+t@{event\+\_\+t}!eventdispatcher.\+h@{eventdispatcher.\+h}}
+\subsubsection[{\texorpdfstring{event\+\_\+t}{event\_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf event\+\_\+t}}\hypertarget{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8}{}\label{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\+V\+\_\+\+U\+P\+D\+A\+TE@{E\+V\+\_\+\+U\+P\+D\+A\+TE}!eventdispatcher.\+h@{eventdispatcher.\+h}}\index{eventdispatcher.\+h@{eventdispatcher.\+h}!E\+V\+\_\+\+U\+P\+D\+A\+TE@{E\+V\+\_\+\+U\+P\+D\+A\+TE}}\item[{\em 
+E\+V\+\_\+\+U\+P\+D\+A\+TE\hypertarget{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8aa3f01dece20e06860f3c92b89f8b0553}{}\label{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8aa3f01dece20e06860f3c92b89f8b0553}
+}]\index{E\+V\+\_\+\+R\+E\+N\+D\+ER@{E\+V\+\_\+\+R\+E\+N\+D\+ER}!eventdispatcher.\+h@{eventdispatcher.\+h}}\index{eventdispatcher.\+h@{eventdispatcher.\+h}!E\+V\+\_\+\+R\+E\+N\+D\+ER@{E\+V\+\_\+\+R\+E\+N\+D\+ER}}\item[{\em 
+E\+V\+\_\+\+R\+E\+N\+D\+ER\hypertarget{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8afd0fb29dc22e812d7648306af562e6ed}{}\label{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8afd0fb29dc22e812d7648306af562e6ed}
+}]\index{E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS@{E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS}!eventdispatcher.\+h@{eventdispatcher.\+h}}\index{eventdispatcher.\+h@{eventdispatcher.\+h}!E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS@{E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS}}\item[{\em 
+E\+V\+\_\+\+N\+U\+M\+O\+F\+E\+V\+E\+N\+TS\hypertarget{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8a47f5fbee1bafda11f2f514e688f146c8}{}\label{eventdispatcher_8h_a2fb9b58e4e5f14f40af8b4a1425841f8a47f5fbee1bafda11f2f514e688f146c8}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{eventdispatcher.\+h@{eventdispatcher.\+h}!dispatch\+\_\+event@{dispatch\+\_\+event}}
+\index{dispatch\+\_\+event@{dispatch\+\_\+event}!eventdispatcher.\+h@{eventdispatcher.\+h}}
+\subsubsection[{\texorpdfstring{dispatch\+\_\+event(event\+\_\+dispatcher\+\_\+t $\ast$ed, int event, void $\ast$args)}{dispatch\_event(event\_dispatcher\_t *ed, int event, void *args)}}]{\setlength{\rightskip}{0pt plus 5cm}int dispatch\+\_\+event (
+\begin{DoxyParamCaption}
+\item[{{\bf event\+\_\+dispatcher\+\_\+t} $\ast$}]{ed, }
+\item[{int}]{event, }
+\item[{void $\ast$}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{eventdispatcher_8h_aaed30c53570e0e1ef66a5a4e66bf453b}{}\label{eventdispatcher_8h_aaed30c53570e0e1ef66a5a4e66bf453b}
+\index{eventdispatcher.\+h@{eventdispatcher.\+h}!event\+\_\+dispatcher\+\_\+init@{event\+\_\+dispatcher\+\_\+init}}
+\index{event\+\_\+dispatcher\+\_\+init@{event\+\_\+dispatcher\+\_\+init}!eventdispatcher.\+h@{eventdispatcher.\+h}}
+\subsubsection[{\texorpdfstring{event\+\_\+dispatcher\+\_\+init(event\+\_\+dispatcher\+\_\+t $\ast$ed)}{event\_dispatcher\_init(event\_dispatcher\_t *ed)}}]{\setlength{\rightskip}{0pt plus 5cm}void event\+\_\+dispatcher\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf event\+\_\+dispatcher\+\_\+t} $\ast$}]{ed}
+\end{DoxyParamCaption}
+)}\hypertarget{eventdispatcher_8h_a65b0e821319e4bfeda30b2a1c0b37951}{}\label{eventdispatcher_8h_a65b0e821319e4bfeda30b2a1c0b37951}
+\index{eventdispatcher.\+h@{eventdispatcher.\+h}!register\+\_\+event\+\_\+callback@{register\+\_\+event\+\_\+callback}}
+\index{register\+\_\+event\+\_\+callback@{register\+\_\+event\+\_\+callback}!eventdispatcher.\+h@{eventdispatcher.\+h}}
+\subsubsection[{\texorpdfstring{register\+\_\+event\+\_\+callback(event\+\_\+dispatcher\+\_\+t $\ast$ed, int event, void $\ast$target, void($\ast$func)(void $\ast$target, void $\ast$args))}{register\_event\_callback(event\_dispatcher\_t *ed, int event, void *target, void(*func)(void *target, void *args))}}]{\setlength{\rightskip}{0pt plus 5cm}int register\+\_\+event\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{{\bf event\+\_\+dispatcher\+\_\+t} $\ast$}]{ed, }
+\item[{int}]{event, }
+\item[{void $\ast$}]{target, }
+\item[{void($\ast$)(void $\ast$target, void $\ast$args)}]{func}
+\end{DoxyParamCaption}
+)}\hypertarget{eventdispatcher_8h_a460184b297e545152cf25121ec607254}{}\label{eventdispatcher_8h_a460184b297e545152cf25121ec607254}

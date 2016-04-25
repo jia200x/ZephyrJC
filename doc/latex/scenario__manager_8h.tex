@@ -1,0 +1,65 @@
+\hypertarget{scenario__manager_8h}{}\section{include/scenario\+\_\+manager.h File Reference}
+\label{scenario__manager_8h}\index{include/scenario\+\_\+manager.\+h@{include/scenario\+\_\+manager.\+h}}
+{\ttfamily \#include \char`\"{}sys.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}core.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scenario.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structscenario__manager__t}{scenario\+\_\+manager\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structscenario__manager__t}{scenario\+\_\+manager\+\_\+t} \hyperlink{scenario__manager_8h_abbad4cf46274c8c6ea84b3cb776e254e}{scenario\+\_\+manager\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{scenario__manager_8h_ab27341d3e156526758bb165ee1536e1e}{sm\+\_\+init} (\hyperlink{structscenario__manager__t}{scenario\+\_\+manager\+\_\+t} $\ast$sm, \hyperlink{structcore__t}{core\+\_\+t} $\ast$core)
+\item 
+void \hyperlink{scenario__manager_8h_af97a0bd5fc53f1895397451a9974ba03}{sm\+\_\+add\+\_\+scenario} (\hyperlink{structscenario__manager__t}{scenario\+\_\+manager\+\_\+t} $\ast$sm, \hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\item 
+void \hyperlink{scenario__manager_8h_a81fd804819b7908d05b6970f1f796e62}{sm\+\_\+process} (\hyperlink{structscenario__manager__t}{scenario\+\_\+manager\+\_\+t} $\ast$sm)
+\item 
+void \hyperlink{scenario__manager_8h_a09dbe018eb26711cdca2cd4fe90ec877}{sm\+\_\+render} (\hyperlink{structscenario__manager__t}{scenario\+\_\+manager\+\_\+t} $\ast$sm)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}!scenario\+\_\+manager\+\_\+t@{scenario\+\_\+manager\+\_\+t}}
+\index{scenario\+\_\+manager\+\_\+t@{scenario\+\_\+manager\+\_\+t}!scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{scenario\+\_\+manager\+\_\+t}{scenario\_manager\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf scenario\+\_\+manager\+\_\+t}  {\bf scenario\+\_\+manager\+\_\+t}}\hypertarget{scenario__manager_8h_abbad4cf46274c8c6ea84b3cb776e254e}{}\label{scenario__manager_8h_abbad4cf46274c8c6ea84b3cb776e254e}
+
+
+\subsection{Function Documentation}
+\index{scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}!sm\+\_\+add\+\_\+scenario@{sm\+\_\+add\+\_\+scenario}}
+\index{sm\+\_\+add\+\_\+scenario@{sm\+\_\+add\+\_\+scenario}!scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{sm\+\_\+add\+\_\+scenario(scenario\+\_\+manager\+\_\+t $\ast$sm, scenario\+\_\+t $\ast$scenario)}{sm\_add\_scenario(scenario\_manager\_t *sm, scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void sm\+\_\+add\+\_\+scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+manager\+\_\+t} $\ast$}]{sm, }
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario__manager_8h_af97a0bd5fc53f1895397451a9974ba03}{}\label{scenario__manager_8h_af97a0bd5fc53f1895397451a9974ba03}
+\index{scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}!sm\+\_\+init@{sm\+\_\+init}}
+\index{sm\+\_\+init@{sm\+\_\+init}!scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{sm\+\_\+init(scenario\+\_\+manager\+\_\+t $\ast$sm, core\+\_\+t $\ast$core)}{sm\_init(scenario\_manager\_t *sm, core\_t *core)}}]{\setlength{\rightskip}{0pt plus 5cm}void sm\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+manager\+\_\+t} $\ast$}]{sm, }
+\item[{{\bf core\+\_\+t} $\ast$}]{core}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario__manager_8h_ab27341d3e156526758bb165ee1536e1e}{}\label{scenario__manager_8h_ab27341d3e156526758bb165ee1536e1e}
+\index{scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}!sm\+\_\+process@{sm\+\_\+process}}
+\index{sm\+\_\+process@{sm\+\_\+process}!scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{sm\+\_\+process(scenario\+\_\+manager\+\_\+t $\ast$sm)}{sm\_process(scenario\_manager\_t *sm)}}]{\setlength{\rightskip}{0pt plus 5cm}void sm\+\_\+process (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+manager\+\_\+t} $\ast$}]{sm}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario__manager_8h_a81fd804819b7908d05b6970f1f796e62}{}\label{scenario__manager_8h_a81fd804819b7908d05b6970f1f796e62}
+\index{scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}!sm\+\_\+render@{sm\+\_\+render}}
+\index{sm\+\_\+render@{sm\+\_\+render}!scenario\+\_\+manager.\+h@{scenario\+\_\+manager.\+h}}
+\subsubsection[{\texorpdfstring{sm\+\_\+render(scenario\+\_\+manager\+\_\+t $\ast$sm)}{sm\_render(scenario\_manager\_t *sm)}}]{\setlength{\rightskip}{0pt plus 5cm}void sm\+\_\+render (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+manager\+\_\+t} $\ast$}]{sm}
+\end{DoxyParamCaption}
+)}\hypertarget{scenario__manager_8h_a09dbe018eb26711cdca2cd4fe90ec877}{}\label{scenario__manager_8h_a09dbe018eb26711cdca2cd4fe90ec877}

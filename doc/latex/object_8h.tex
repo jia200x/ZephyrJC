@@ -1,0 +1,62 @@
+\hypertarget{object_8h}{}\section{include/object.h File Reference}
+\label{object_8h}\index{include/object.\+h@{include/object.\+h}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}sys.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}scenario.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structobject__t}{object\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structcomponent__t}{component\+\_\+t} \hyperlink{object_8h_ae54ab4292928b9330e245c09daf01726}{component\+\_\+t}
+\item 
+typedef struct \hyperlink{structobject__t}{object\+\_\+t} \hyperlink{object_8h_a012925d018662e7b0ce2baa544b77b15}{object\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structobject__t}{object\+\_\+t} $\ast$ \hyperlink{object_8h_ae33d79b20e997ff7552c22b88b74d2db}{object\+\_\+init} (\hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\item 
+void \hyperlink{object_8h_a987123ac01289d1f52a40b3e09fc9f9d}{add\+\_\+component} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj, struct \hyperlink{structcomponent__t}{component\+\_\+t} $\ast$c)
+\item 
+void \hyperlink{object_8h_a1465029ef5f7018ad94130903ba904dc}{register\+\_\+object} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj, \hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{object.\+h@{object.\+h}!component\+\_\+t@{component\+\_\+t}}
+\index{component\+\_\+t@{component\+\_\+t}!object.\+h@{object.\+h}}
+\subsubsection[{\texorpdfstring{component\+\_\+t}{component\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf component\+\_\+t} {\bf component\+\_\+t}}\hypertarget{object_8h_ae54ab4292928b9330e245c09daf01726}{}\label{object_8h_ae54ab4292928b9330e245c09daf01726}
+\index{object.\+h@{object.\+h}!object\+\_\+t@{object\+\_\+t}}
+\index{object\+\_\+t@{object\+\_\+t}!object.\+h@{object.\+h}}
+\subsubsection[{\texorpdfstring{object\+\_\+t}{object\_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf object\+\_\+t}  {\bf object\+\_\+t}}\hypertarget{object_8h_a012925d018662e7b0ce2baa544b77b15}{}\label{object_8h_a012925d018662e7b0ce2baa544b77b15}
+
+
+\subsection{Function Documentation}
+\index{object.\+h@{object.\+h}!add\+\_\+component@{add\+\_\+component}}
+\index{add\+\_\+component@{add\+\_\+component}!object.\+h@{object.\+h}}
+\subsubsection[{\texorpdfstring{add\+\_\+component(object\+\_\+t $\ast$obj, struct component\+\_\+t $\ast$c)}{add\_component(object\_t *obj, struct component\_t *c)}}]{\setlength{\rightskip}{0pt plus 5cm}void add\+\_\+component (
+\begin{DoxyParamCaption}
+\item[{{\bf object\+\_\+t} $\ast$}]{obj, }
+\item[{struct {\bf component\+\_\+t} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{object_8h_a987123ac01289d1f52a40b3e09fc9f9d}{}\label{object_8h_a987123ac01289d1f52a40b3e09fc9f9d}
+\index{object.\+h@{object.\+h}!object\+\_\+init@{object\+\_\+init}}
+\index{object\+\_\+init@{object\+\_\+init}!object.\+h@{object.\+h}}
+\subsubsection[{\texorpdfstring{object\+\_\+init(scenario\+\_\+t $\ast$scenario)}{object\_init(scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf object\+\_\+t}$\ast$ object\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)}\hypertarget{object_8h_ae33d79b20e997ff7552c22b88b74d2db}{}\label{object_8h_ae33d79b20e997ff7552c22b88b74d2db}
+\index{object.\+h@{object.\+h}!register\+\_\+object@{register\+\_\+object}}
+\index{register\+\_\+object@{register\+\_\+object}!object.\+h@{object.\+h}}
+\subsubsection[{\texorpdfstring{register\+\_\+object(object\+\_\+t $\ast$obj, scenario\+\_\+t $\ast$scenario)}{register\_object(object\_t *obj, scenario\_t *scenario)}}]{\setlength{\rightskip}{0pt plus 5cm}void register\+\_\+object (
+\begin{DoxyParamCaption}
+\item[{{\bf object\+\_\+t} $\ast$}]{obj, }
+\item[{{\bf scenario\+\_\+t} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)}\hypertarget{object_8h_a1465029ef5f7018ad94130903ba904dc}{}\label{object_8h_a1465029ef5f7018ad94130903ba904dc}
