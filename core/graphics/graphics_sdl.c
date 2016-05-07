@@ -65,7 +65,6 @@ void screen_fill(spriteBuffer_t *buffer, color_t *color)
 void screen_update(graphics_t *graphics)
 {
 	SDL_UpdateWindowSurface((SDL_Window*) graphics->window); 
-	SDL_Delay(50);
 }
 
 spriteBuffer_t *create_sprite(void)
