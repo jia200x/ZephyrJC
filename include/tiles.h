@@ -15,8 +15,10 @@ typedef struct tilepool_t
 	spriteBuffer_t *_tilemap; /**< Pointer to strip of tiles*/
 	uint16_t _tw; /**< Tile width*/
 	uint16_t _th; /**< Tile height*/
-	uint16_t _xoffset; /** X offset of strip */
-	uint16_t _yoffset; /** Y offset of strip */
+	uint16_t _xoffset; /**< X offset of strip */
+	uint16_t _yoffset; /**< Y offset of strip */
+	uint16_t _cols; /**< Number of columns of tilepool */
+	uint16_t _rows; /**< Number of rows of tilepool */
 } tilepool_t;
 
 /**
@@ -37,9 +39,12 @@ typedef struct tilemap_t
  */
 typedef struct tileengine_t
 {
-	component_t base;i /**< Inherits from component */
+	component_t base; /**< Inherits from component */
 	linked_list_t tilemaps; /**< List of tile maps*/
+	tilemap_t *current_tilemap;
 	rect_t source; /**< Area of tilemap to draw*/
+	int screen_x; /**< X location in screen */
+	int screen_y; /**< Y location in screen */
 } tileengine_t;
 
 
@@ -70,7 +75,7 @@ void tileengine_render(void *component, void *args);
  * @param xoff X offset of tile pool
  * @param yoff Y offset of tile pool
  */
-tilepool_t *create_tilepool(char *filename, uint16_t tw, uint16_t th, uint16_t xoff, uint16_t yoff);
+tilepool_t *create_tilepool(char *filename, uint16_t tw, uint16_t th, uint16_t xoff, uint16_t yoff, uint16_t cols, uint16_t rows);
 
 /**
  * Create a tile map
