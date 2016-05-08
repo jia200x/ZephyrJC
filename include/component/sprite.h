@@ -3,6 +3,7 @@
 #include "graphics.h"
 #include "transform.h"
 
+#define COMPONENT_SPRITE (1)
 /**
  * \brief Sprite component
  */

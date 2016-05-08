@@ -88,14 +88,11 @@ static inline int linked_list_count_elem(linked_list_t *linked_list)
  *
  * @param linked_list Pointer to linked list
  */
-static inline void *linked_list_get_head_obj(linked_list_t *linked_list)
+static inline ll_node_t *linked_list_get_head_obj(linked_list_t *linked_list)
 {
 	if(linked_list != NULL)
 	{
-		if (linked_list->head != NULL)
-		{
-			return linked_list->head->data;
-		}
+		return linked_list->head;
 	}
 	return NULL;
 }

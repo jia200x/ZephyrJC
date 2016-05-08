@@ -43,4 +43,13 @@ void add_component(object_t *obj, struct component_t *c);
  */
 void register_object(object_t *obj, scenario_t *scenario);
 
+/**
+ * Get a component by type
+ *
+ * @param obj Object owning the component.
+ * @param type Type of component
+ */
+
+component_t *get_component_by_type(object_t *obj, uint8_t type);
+
 #endif

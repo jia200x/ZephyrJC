@@ -2,6 +2,7 @@
 #define TRANSFORM_H
 #include "component.h"
 
+#define COMPONENT_TRANSFORM (2)
 /**
  * \brief Transform component
  */

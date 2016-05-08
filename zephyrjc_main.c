@@ -21,11 +21,11 @@ int main(void)
 	object_t *obj = object_create(test_scenario);
 
 	//Add transform component to object
-	component_t *transform = component_create(0,obj, sizeof(transform_t), &transform_init, NULL);
+	component_t *transform = component_create(COMPONENT_TRANSFORM,obj, sizeof(transform_t), &transform_init, NULL);
 	(void) transform;
 
 	//Add tilemap
-	component_t *tileengine = component_create(2, obj, sizeof(tileengine_t), &tileengine_init, NULL);	
+	component_t *tileengine = component_create(COMPONENT_SPRITE, obj, sizeof(tileengine_t), &tileengine_init, NULL);	
 	tilepool_t *tp = create_tilepool("tiles.png", 16, 16, 0, 0, 55, 36);
 
 	uint16_t test_array[36][55];
@@ -44,14 +44,15 @@ int main(void)
 	cte->source.w = 640;
 	cte->source.h = 480;
 
+	printf("%p and %p\n", transform, get_component_by_type(obj, COMPONENT_TRANSFORM));
+
 	//Add sprite component to object. Set sprite
-	/*sprite_t *sp = (sprite_t*) component_create(1,obj, sizeof(sprite_t), &sprite_init, (void**) &transform);
+	sprite_t *sp = (sprite_t*) component_create(1,obj, sizeof(sprite_t), &sprite_init, (void**) &transform);
 	spriteBuffer_t *sprite = create_sprite();
 	load_bmp(sprite, "mario.png");
-	sprite_set(sp, sprite);*/
+	sprite_set(sp, sprite);
 
 	//Start Zephyr Jarlsberg & Chedar engine
-	puts("I'm here");
 	zephyrjc_start(game);
 	return 0;
 }
