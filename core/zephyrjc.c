@@ -1,6 +1,7 @@
 #include "zephyrjc.h"
 #include "scenario.h"
 #include "SDL2/SDL.h"
+#include "core/timer.h"
 
 const int FPS = 30;
 
@@ -31,23 +32,23 @@ void zjc_render(zephyrjc_t *zjc)
 void zephyrjc_start(zephyrjc_t *zjc)
 {
 	int TICKS_PER_FRAME = 1000/FPS;
-	int fpsTimer = SDL_GetTicks();
-	int capTimer = SDL_GetTicks();
+	LTimer fpsTimer, capTimer;
+	timer_zero(&fpsTimer);
 
 	float avgFps;
 	int framecount = 0;
 	int ticks;
 	while(1)
 	{
-		capTimer = SDL_GetTicks();
-		avgFps = framecount++/((SDL_GetTicks() - fpsTimer)/1000.f);
+		timer_zero(&capTimer);
+		avgFps = framecount++/(timer_getTicks(&fpsTimer)/1000.f);
 		avgFps = avgFps > 20000 ? 0 : avgFps;
 
 		//core.input();
 		zjc_process(zjc);
 		zjc_render(zjc);
 	
-		ticks = SDL_GetTicks()-capTimer;
+		ticks = timer_getTicks(&capTimer);
 		if(ticks < TICKS_PER_FRAME)
 		{
 			SDL_Delay(TICKS_PER_FRAME - ticks);
