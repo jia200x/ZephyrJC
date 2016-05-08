@@ -2,13 +2,16 @@
 #include "eventdispatcher.h"
 
 
-void sprite_init(component_t *c, void  **args)
+component_t *sprite_create(object_t *obj)
 {
+	component_t *c = component_create(COMPONENT_SPRITE, obj, sizeof(sprite_t));
+	component_t *t = get_component_by_type(obj, COMPONENT_TRANSFORM);
 	sprite_t *s = (sprite_t*) c;
 	s->sprite = NULL;
 	s->sprite = create_sprite();
-	s->transform = (transform_t*) *args;
+	s->transform = (transform_t*) t;
 	register_event_callback(&c->obj->scenario->ed, EV_RENDER, c, &sprite_render);
+	return c;
 }
 
 void sprite_set(sprite_t *sprite, spriteBuffer_t *sb)

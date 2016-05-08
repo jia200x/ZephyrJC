@@ -19,12 +19,11 @@ typedef struct transform_t
 typedef struct object_t object_t;
 
 /**
- * Init component. Called from create_component.
- *
- * @param c Pointer to component
- * @param args Arguments passed from init
+ * Create a transform component and add to object
+ * @param obj Object to add component
+ * @return Pointer to new transform component
  */
-void transform_init(component_t *c, void  **args);
+component_t *transform_create(object_t *obj);
 
 
 /**

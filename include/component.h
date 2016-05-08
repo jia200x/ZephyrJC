@@ -19,16 +19,13 @@ typedef struct component_t
  * \param type Type of component
  * \param obj Pointer to object holding the component
  * \param size Size of the component. (Pass sizeof of child component)
- * \param cb Callback of init function for child component
- * \param args Arguments for init function
  * \return Pointer to created component
  */
-static inline component_t *component_create(uint8_t type, object_t *obj, size_t size, void (*cb)(component_t*, void **args), void **args)
+static inline component_t *component_create(uint8_t type, object_t *obj, size_t size)
 {
 	component_t *c = malloc(size);
 	c->obj = obj;
 	c->type = type;
-	cb(c, args);
 	add_component(obj, c);
 	return c;
 }

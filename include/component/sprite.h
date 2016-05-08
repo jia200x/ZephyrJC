@@ -17,18 +17,20 @@ typedef struct sprite_t
 typedef struct object_t object_t;
 
 /**
+ * Create a sprite component and add to object
+ * @param obj Object to add component
+ * @return Pointer to new sprite component
+ */
+component_t *sprite_create(object_t *obj);
+
+
+/**
  * Init component. Called from create_component.
  *
  * @param c Pointer to component
  * @param args Arguments passed from init
  */
-void sprite_init(component_t *c, void  **args);
-/**
- * Set sprite
- *
- * @param sprite Pointer to sprite component
- * @param sb Pointer to image to set
- */
+
 void sprite_set(sprite_t *sprite, spriteBuffer_t *sb);
 
 /**

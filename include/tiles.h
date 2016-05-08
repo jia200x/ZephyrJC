@@ -5,6 +5,8 @@
 #include <inttypes.h>
 #include "component.h"
 
+#define COMPONENT_TILEENGINE (3)
+
 /**
  * \brief Tile pool.
  *
@@ -49,12 +51,12 @@ typedef struct tileengine_t
 
 
 /**
- * Callback of component init
- *
- * @param c Pointer to tileengine base
- * @param args Arguments for initialization
+ * Create a tileengine component and add to object
+ * @param obj Object to add component
+ * @return Pointer to new tileengine component
  */
-void tileengine_init(component_t *c, void **args);
+component_t *tileengine_create(object_t *obj);
+
 
 /**
  * Callback of render subscription.

@@ -2,8 +2,9 @@
 #include "tiles.h"
 
 
-void tileengine_init(component_t *c, void **args)
+component_t *tileengine_create(object_t *obj)
 {
+	component_t *c = component_create(COMPONENT_TILEENGINE, obj, sizeof(tileengine_t));
 	tileengine_t *te = (tileengine_t*) c;
 	te->current_tilemap = NULL;
 	te->source.x = 0;
@@ -12,6 +13,7 @@ void tileengine_init(component_t *c, void **args)
 	te->source.h = 128;
 	linked_list_init(&te->tilemaps);
 	register_event_callback(&c->obj->scenario->ed, EV_RENDER, c, &tileengine_render);
+	return c;
 }
 
 tilepool_t *create_tilepool(char *filename, uint16_t tw, uint16_t th, uint16_t xoff, uint16_t yoff, uint16_t cols, uint16_t rows)
