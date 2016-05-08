@@ -55,8 +55,6 @@ static void tilemap_draw(graphics_t *graphics, tilemap_t *tilemap, rect_t *src)
 	int screen_xoffset = src->x > 0 ? (src->x%tw) : src->x;
 	int screen_yoffset = src->y > 0 ? (src->y%th) : src->y;
 
-	printf("nx:%i\n", nx);
-
 	for(int i=0;i<ny;i++)
 	{
 		for(int j=0;j<nx;j++)
