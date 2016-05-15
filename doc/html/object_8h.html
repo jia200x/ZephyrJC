@@ -122,6 +122,8 @@ Functions</h2></td></tr>
 <tr class="separator:a987123ac01289d1f52a40b3e09fc9f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1465029ef5f7018ad94130903ba904dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#a1465029ef5f7018ad94130903ba904dc">register_object</a> (<a class="el" href="structobject__t.html">object_t</a> *obj, <a class="el" href="structscenario__t.html">scenario_t</a> *scenario)</td></tr>
 <tr class="separator:a1465029ef5f7018ad94130903ba904dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5743df7cbe1d853f115b157ee96881"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcomponent__t.html">component_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object_8h.html#ada5743df7cbe1d853f115b157ee96881">get_component_by_type</a> (<a class="el" href="structobject__t.html">object_t</a> *obj, uint8_t type)</td></tr>
+<tr class="separator:ada5743df7cbe1d853f115b157ee96881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="ae54ab4292928b9330e245c09daf01726"></a>
@@ -179,6 +181,40 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">obj</td><td>Object containing the component. </td></tr>
     <tr><td class="paramname">c</td><td>Component to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ada5743df7cbe1d853f115b157ee96881"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcomponent__t.html">component_t</a>* get_component_by_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structobject__t.html">object_t</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a component by type</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Object owning the component. </td></tr>
+    <tr><td class="paramname">type</td><td>Type of component </td></tr>
   </table>
   </dd>
 </dl>

@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -105,6 +106,11 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite component.  <a href="structsprite__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a7295b0a2c957b886921a4179b9377019"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#a7295b0a2c957b886921a4179b9377019">COMPONENT_SPRITE</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:a7295b0a2c957b886921a4179b9377019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:abf15e3a532093f8b4c4be375c8c23505"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structsprite__t.html">sprite_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#abf15e3a532093f8b4c4be375c8c23505">sprite_t</a></td></tr>
@@ -115,13 +121,26 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aec72c3e6bb317c418c77df2a632e486f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#aec72c3e6bb317c418c77df2a632e486f">sprite_init</a> (<a class="el" href="structcomponent__t.html">component_t</a> *c, void **args)</td></tr>
-<tr class="separator:aec72c3e6bb317c418c77df2a632e486f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17d79cce7a3bf615f990598bd6881c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcomponent__t.html">component_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#ac17d79cce7a3bf615f990598bd6881c5">sprite_create</a> (<a class="el" href="structobject__t.html">object_t</a> *obj)</td></tr>
+<tr class="separator:ac17d79cce7a3bf615f990598bd6881c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e31a00c6874249a5b828c3ee2ade414"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#a7e31a00c6874249a5b828c3ee2ade414">sprite_set</a> (<a class="el" href="structsprite__t.html">sprite_t</a> *sprite, <a class="el" href="structsprite_buffer__t.html">spriteBuffer_t</a> *sb)</td></tr>
 <tr class="separator:a7e31a00c6874249a5b828c3ee2ade414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1436e0ad57b5128d9829888e1f3efed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#ad1436e0ad57b5128d9829888e1f3efed">sprite_render</a> (void *c, void *args)</td></tr>
 <tr class="separator:ad1436e0ad57b5128d9829888e1f3efed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a7295b0a2c957b886921a4179b9377019"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPONENT_SPRITE&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a27555b6a6718dd529daf3f8acd554745"></a>
 <div class="memitem">
@@ -150,37 +169,26 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aec72c3e6bb317c418c77df2a632e486f"></a>
+<a class="anchor" id="ac17d79cce7a3bf615f990598bd6881c5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sprite_init </td>
+          <td class="memname"><a class="el" href="structcomponent__t.html">component_t</a>* sprite_create </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structcomponent__t.html">component_t</a> *&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="structobject__t.html">object_t</a> *&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">void **&#160;</td>
-          <td class="paramname"><em>args</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Init component. Called from create_component.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Create a sprite component and add to object </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">c</td><td>Pointer to component </td></tr>
-    <tr><td class="paramname">args</td><td>Arguments passed from init </td></tr>
+    <tr><td class="paramname">obj</td><td>Object to add component </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new sprite component </dd></dl>
 
 </div>
 </div>
@@ -242,11 +250,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set sprite</p>
+<p>Init component. Called from create_component.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sprite</td><td>Pointer to sprite component </td></tr>
-    <tr><td class="paramname">sb</td><td>Pointer to image to set </td></tr>
+    <tr><td class="paramname">c</td><td>Pointer to component </td></tr>
+    <tr><td class="paramname">args</td><td>Arguments passed from init </td></tr>
   </table>
   </dd>
 </dl>

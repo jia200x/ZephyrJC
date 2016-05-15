@@ -61,4 +61,11 @@ static inline void zephyrjc_set_current_scenario(zephyrjc_t *zjc, scenario_t *sc
 {
 	zjc->current_scenario = scenario;
 }
+
+/**
+ * Init keyboard.
+ * 
+ * @param zjc Pointer to engine
+ */
+void zephyrjc_keyboard_init(zephyrjc_t *zjc);
 #endif

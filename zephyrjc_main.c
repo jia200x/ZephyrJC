@@ -13,6 +13,9 @@ int main(void)
 	//Init graphics
 	zephyrjc_init_graphics(game, 640, 480, 32);
 
+	//Init keyboard
+	zephyrjc_keyboard_init(game);
+
 	//Create scenario and set as current
 	scenario_t *test_scenario = scenario_create(game);
 	zephyrjc_set_current_scenario(game, test_scenario);

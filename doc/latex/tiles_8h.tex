@@ -12,6 +12,11 @@ struct \hyperlink{structtilemap__t}{tilemap\+\_\+t}
 \begin{DoxyCompactList}\small\item\em Tile map. \end{DoxyCompactList}\item 
 struct \hyperlink{structtileengine__t}{tileengine\+\_\+t}
 \begin{DoxyCompactList}\small\item\em Tile engine component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tiles_8h_a62727df05a00a6f330889cb64bbc90c4}{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+I\+L\+E\+E\+N\+G\+I\+NE}~(3)
+\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,14 +29,20 @@ typedef struct \hyperlink{structtileengine__t}{tileengine\+\_\+t} \hyperlink{til
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{tiles_8h_a100a2beac974bc39b1328d3607f6cd89}{tileengine\+\_\+init} (\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$c, void $\ast$$\ast$args)
+\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$ \hyperlink{tiles_8h_a1197ef458f72dd367702382499af58c6}{tileengine\+\_\+create} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj)
 \item 
 void \hyperlink{tiles_8h_a6f731521b9acc42faea525ba8952da9c}{tileengine\+\_\+render} (void $\ast$component, void $\ast$args)
 \item 
-\hyperlink{structtilepool__t}{tilepool\+\_\+t} $\ast$ \hyperlink{tiles_8h_a92619b3151662307121f853be662213a}{create\+\_\+tilepool} (char $\ast$filename, uint16\+\_\+t tw, uint16\+\_\+t th, uint16\+\_\+t xoff, uint16\+\_\+t yoff)
+\hyperlink{structtilepool__t}{tilepool\+\_\+t} $\ast$ \hyperlink{tiles_8h_a1ad681b3213b3a3af46f122657582ea8}{create\+\_\+tilepool} (char $\ast$filename, uint16\+\_\+t tw, uint16\+\_\+t th, uint16\+\_\+t xoff, uint16\+\_\+t yoff, uint16\+\_\+t cols, uint16\+\_\+t rows)
 \item 
 \hyperlink{structtilemap__t}{tilemap\+\_\+t} $\ast$ \hyperlink{tiles_8h_a8209facc63fd7cc8ad2604e1f6e318ce}{create\+\_\+tilemap} (\hyperlink{structtilepool__t}{tilepool\+\_\+t} $\ast$pool, uint16\+\_\+t $\ast$tilestruct, int size\+\_\+x, int size\+\_\+y, uint8\+\_\+t depth)
 \end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{tiles.\+h@{tiles.\+h}!C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+I\+L\+E\+E\+N\+G\+I\+NE@{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+I\+L\+E\+E\+N\+G\+I\+NE}}
+\index{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+I\+L\+E\+E\+N\+G\+I\+NE@{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+I\+L\+E\+E\+N\+G\+I\+NE}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+I\+L\+E\+E\+N\+G\+I\+NE}{COMPONENT\_TILEENGINE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+I\+L\+E\+E\+N\+G\+I\+NE~(3)}\hypertarget{tiles_8h_a62727df05a00a6f330889cb64bbc90c4}{}\label{tiles_8h_a62727df05a00a6f330889cb64bbc90c4}
 
 
 \subsection{Typedef Documentation}
@@ -87,15 +98,17 @@ Create a tile map
 \end{DoxyParams}
 \index{tiles.\+h@{tiles.\+h}!create\+\_\+tilepool@{create\+\_\+tilepool}}
 \index{create\+\_\+tilepool@{create\+\_\+tilepool}!tiles.\+h@{tiles.\+h}}
-\subsubsection[{\texorpdfstring{create\+\_\+tilepool(char $\ast$filename, uint16\+\_\+t tw, uint16\+\_\+t th, uint16\+\_\+t xoff, uint16\+\_\+t yoff)}{create\_tilepool(char *filename, uint16\_t tw, uint16\_t th, uint16\_t xoff, uint16\_t yoff)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tilepool\+\_\+t}$\ast$ create\+\_\+tilepool (
+\subsubsection[{\texorpdfstring{create\+\_\+tilepool(char $\ast$filename, uint16\+\_\+t tw, uint16\+\_\+t th, uint16\+\_\+t xoff, uint16\+\_\+t yoff, uint16\+\_\+t cols, uint16\+\_\+t rows)}{create\_tilepool(char *filename, uint16\_t tw, uint16\_t th, uint16\_t xoff, uint16\_t yoff, uint16\_t cols, uint16\_t rows)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tilepool\+\_\+t}$\ast$ create\+\_\+tilepool (
 \begin{DoxyParamCaption}
 \item[{char $\ast$}]{filename, }
 \item[{uint16\+\_\+t}]{tw, }
 \item[{uint16\+\_\+t}]{th, }
 \item[{uint16\+\_\+t}]{xoff, }
-\item[{uint16\+\_\+t}]{yoff}
+\item[{uint16\+\_\+t}]{yoff, }
+\item[{uint16\+\_\+t}]{cols, }
+\item[{uint16\+\_\+t}]{rows}
 \end{DoxyParamCaption}
-)}\hypertarget{tiles_8h_a92619b3151662307121f853be662213a}{}\label{tiles_8h_a92619b3151662307121f853be662213a}
+)}\hypertarget{tiles_8h_a1ad681b3213b3a3af46f122657582ea8}{}\label{tiles_8h_a1ad681b3213b3a3af46f122657582ea8}
 Create a tilepool
 
 
@@ -111,23 +124,21 @@ Create a tilepool
 {\em yoff} & Y offset of tile pool \\
 \hline
 \end{DoxyParams}
-\index{tiles.\+h@{tiles.\+h}!tileengine\+\_\+init@{tileengine\+\_\+init}}
-\index{tileengine\+\_\+init@{tileengine\+\_\+init}!tiles.\+h@{tiles.\+h}}
-\subsubsection[{\texorpdfstring{tileengine\+\_\+init(component\+\_\+t $\ast$c, void $\ast$$\ast$args)}{tileengine\_init(component\_t *c, void **args)}}]{\setlength{\rightskip}{0pt plus 5cm}void tileengine\+\_\+init (
+\index{tiles.\+h@{tiles.\+h}!tileengine\+\_\+create@{tileengine\+\_\+create}}
+\index{tileengine\+\_\+create@{tileengine\+\_\+create}!tiles.\+h@{tiles.\+h}}
+\subsubsection[{\texorpdfstring{tileengine\+\_\+create(object\+\_\+t $\ast$obj)}{tileengine\_create(object\_t *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf component\+\_\+t}$\ast$ tileengine\+\_\+create (
 \begin{DoxyParamCaption}
-\item[{{\bf component\+\_\+t} $\ast$}]{c, }
-\item[{void $\ast$$\ast$}]{args}
+\item[{{\bf object\+\_\+t} $\ast$}]{obj}
 \end{DoxyParamCaption}
-)}\hypertarget{tiles_8h_a100a2beac974bc39b1328d3607f6cd89}{}\label{tiles_8h_a100a2beac974bc39b1328d3607f6cd89}
-Callback of component init
-
-
+)}\hypertarget{tiles_8h_a1197ef458f72dd367702382499af58c6}{}\label{tiles_8h_a1197ef458f72dd367702382499af58c6}
+Create a tileengine component and add to object 
 \begin{DoxyParams}{Parameters}
-{\em c} & Pointer to tileengine base \\
-\hline
-{\em args} & Arguments for initialization \\
+{\em obj} & Object to add component \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new tileengine component 
+\end{DoxyReturn}
 \index{tiles.\+h@{tiles.\+h}!tileengine\+\_\+render@{tileengine\+\_\+render}}
 \index{tileengine\+\_\+render@{tileengine\+\_\+render}!tiles.\+h@{tiles.\+h}}
 \subsubsection[{\texorpdfstring{tileengine\+\_\+render(void $\ast$component, void $\ast$args)}{tileengine\_render(void *component, void *args)}}]{\setlength{\rightskip}{0pt plus 5cm}void tileengine\+\_\+render (

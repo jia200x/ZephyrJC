@@ -10,3 +10,8 @@ int timer_getTicks(LTimer *timer)
 {
 	return SDL_GetTicks()-timer->_setpoint;
 }
+
+void timer_delay(int time)
+{
+	SDL_Delay(time);
+}

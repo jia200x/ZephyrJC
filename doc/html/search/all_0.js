@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['_5fcols',['_cols',['../structtilepool__t.html#a8e1d6f20ffda4f4d51ff73e4512a1d64',1,'tilepool_t']]],
   ['_5fev_5flist',['_ev_list',['../structevent__dispatcher__t.html#a43b47329e5ca364167439001c76a781a',1,'event_dispatcher_t']]],
   ['_5fhead',['_head',['../structscenario__manager__t.html#ad359cd8fa8497fcd1cf96c5b549cb947',1,'scenario_manager_t::_head()'],['../structzephyrjc__t.html#afd66a9f9f995b6a6a21d4d429668c5ee',1,'zephyrjc_t::_head()']]],
+  ['_5frows',['_rows',['../structtilepool__t.html#afd128c1a685a842642a9d64bf5073abe',1,'tilepool_t']]],
   ['_5fsprite',['_sprite',['../structsprite_buffer__t.html#a4714aead824e3ab1026dbbbe1f996cb9',1,'spriteBuffer_t']]],
   ['_5fth',['_th',['../structtilepool__t.html#a93705a60174f75c507a2168ddae2f45e',1,'tilepool_t']]],
   ['_5ftilemap',['_tilemap',['../structtilepool__t.html#a2bb67a7343217713e040b5b226b7dd32',1,'tilepool_t']]],

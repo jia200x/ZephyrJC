@@ -14,7 +14,7 @@ typedef struct \hyperlink{structcomponent__t}{component\+\_\+t} \hyperlink{compo
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{structcomponent__t}{component\+\_\+t} $\ast$ \hyperlink{component_8h_a4db36095f6035a959ec51e03e33d1b3a}{component\+\_\+create} (uint8\+\_\+t type, \hyperlink{structobject__t}{object\+\_\+t} $\ast$obj, size\+\_\+t size, void($\ast$cb)(\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$, void $\ast$$\ast$args), void $\ast$$\ast$args)
+static \hyperlink{structcomponent__t}{component\+\_\+t} $\ast$ \hyperlink{component_8h_a36d62df82ccd3547558cb4d5491fdcd1}{component\+\_\+create} (uint8\+\_\+t type, \hyperlink{structobject__t}{object\+\_\+t} $\ast$obj, size\+\_\+t size)
 \end{DoxyCompactItemize}
 
 
@@ -31,15 +31,13 @@ Should be extended by components.
 \subsection{Function Documentation}
 \index{component.\+h@{component.\+h}!component\+\_\+create@{component\+\_\+create}}
 \index{component\+\_\+create@{component\+\_\+create}!component.\+h@{component.\+h}}
-\subsubsection[{\texorpdfstring{component\+\_\+create(uint8\+\_\+t type, object\+\_\+t $\ast$obj, size\+\_\+t size, void($\ast$cb)(component\+\_\+t $\ast$, void $\ast$$\ast$args), void $\ast$$\ast$args)}{component\_create(uint8\_t type, object\_t *obj, size\_t size, void(*cb)(component\_t *, void **args), void **args)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf component\+\_\+t}$\ast$ component\+\_\+create (
+\subsubsection[{\texorpdfstring{component\+\_\+create(uint8\+\_\+t type, object\+\_\+t $\ast$obj, size\+\_\+t size)}{component\_create(uint8\_t type, object\_t *obj, size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf component\+\_\+t}$\ast$ component\+\_\+create (
 \begin{DoxyParamCaption}
 \item[{uint8\+\_\+t}]{type, }
 \item[{{\bf object\+\_\+t} $\ast$}]{obj, }
-\item[{size\+\_\+t}]{size, }
-\item[{void($\ast$)({\bf component\+\_\+t} $\ast$, void $\ast$$\ast$args)}]{cb, }
-\item[{void $\ast$$\ast$}]{args}
+\item[{size\+\_\+t}]{size}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{component_8h_a4db36095f6035a959ec51e03e33d1b3a}{}\label{component_8h_a4db36095f6035a959ec51e03e33d1b3a}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{component_8h_a36d62df82ccd3547558cb4d5491fdcd1}{}\label{component_8h_a36d62df82ccd3547558cb4d5491fdcd1}
 Create a component.
 
 
@@ -49,10 +47,6 @@ Create a component.
 {\em obj} & Pointer to object holding the component \\
 \hline
 {\em size} & Size of the component. (Pass sizeof of child component) \\
-\hline
-{\em cb} & Callback of init function for child component \\
-\hline
-{\em args} & Arguments for init function \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

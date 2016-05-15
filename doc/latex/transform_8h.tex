@@ -6,6 +6,11 @@
 \item 
 struct \hyperlink{structtransform__t}{transform\+\_\+t}
 \begin{DoxyCompactList}\small\item\em Transform component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{transform_8h_acc43336b8a4f36c89dc7b40fbb5add5f}{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}~(2)
+\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,10 +21,16 @@ typedef struct \hyperlink{structobject__t}{object\+\_\+t} \hyperlink{transform_8
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{transform_8h_a05bf05399f20889c9e7ca0bfbfbcfe2a}{transform\+\_\+init} (\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$c, void $\ast$$\ast$args)
+\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$ \hyperlink{transform_8h_aab7feb0cacd55474f7633218936b3550}{transform\+\_\+create} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj)
 \item 
 void \hyperlink{transform_8h_a68fdb34ee55774515d1652ca5b0f7bac}{transform\+\_\+process} (void $\ast$c, void $\ast$args)
 \end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{transform.\+h@{transform.\+h}!C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM@{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}}
+\index{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM@{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}!transform.\+h@{transform.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM}{COMPONENT\_TRANSFORM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+F\+O\+RM~(2)}\hypertarget{transform_8h_acc43336b8a4f36c89dc7b40fbb5add5f}{}\label{transform_8h_acc43336b8a4f36c89dc7b40fbb5add5f}
 
 
 \subsection{Typedef Documentation}
@@ -36,23 +47,21 @@ Transform component.
 
 
 \subsection{Function Documentation}
-\index{transform.\+h@{transform.\+h}!transform\+\_\+init@{transform\+\_\+init}}
-\index{transform\+\_\+init@{transform\+\_\+init}!transform.\+h@{transform.\+h}}
-\subsubsection[{\texorpdfstring{transform\+\_\+init(component\+\_\+t $\ast$c, void $\ast$$\ast$args)}{transform\_init(component\_t *c, void **args)}}]{\setlength{\rightskip}{0pt plus 5cm}void transform\+\_\+init (
+\index{transform.\+h@{transform.\+h}!transform\+\_\+create@{transform\+\_\+create}}
+\index{transform\+\_\+create@{transform\+\_\+create}!transform.\+h@{transform.\+h}}
+\subsubsection[{\texorpdfstring{transform\+\_\+create(object\+\_\+t $\ast$obj)}{transform\_create(object\_t *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf component\+\_\+t}$\ast$ transform\+\_\+create (
 \begin{DoxyParamCaption}
-\item[{{\bf component\+\_\+t} $\ast$}]{c, }
-\item[{void $\ast$$\ast$}]{args}
+\item[{{\bf object\+\_\+t} $\ast$}]{obj}
 \end{DoxyParamCaption}
-)}\hypertarget{transform_8h_a05bf05399f20889c9e7ca0bfbfbcfe2a}{}\label{transform_8h_a05bf05399f20889c9e7ca0bfbfbcfe2a}
-Init component. Called from create\+\_\+component.
-
-
+)}\hypertarget{transform_8h_aab7feb0cacd55474f7633218936b3550}{}\label{transform_8h_aab7feb0cacd55474f7633218936b3550}
+Create a transform component and add to object 
 \begin{DoxyParams}{Parameters}
-{\em c} & Pointer to component \\
-\hline
-{\em args} & Arguments passed from init \\
+{\em obj} & Object to add component \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new transform component 
+\end{DoxyReturn}
 \index{transform.\+h@{transform.\+h}!transform\+\_\+process@{transform\+\_\+process}}
 \index{transform\+\_\+process@{transform\+\_\+process}!transform.\+h@{transform.\+h}}
 \subsubsection[{\texorpdfstring{transform\+\_\+process(void $\ast$c, void $\ast$args)}{transform\_process(void *c, void *args)}}]{\setlength{\rightskip}{0pt plus 5cm}void transform\+\_\+process (

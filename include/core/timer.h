@@ -8,5 +8,6 @@ typedef struct LTimer
 
 void timer_zero(LTimer *timer);
 int timer_getTicks(LTimer *timer);
+void timer_delay(int time);
 
 #endif

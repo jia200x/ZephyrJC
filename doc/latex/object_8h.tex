@@ -24,6 +24,8 @@ typedef struct \hyperlink{structobject__t}{object\+\_\+t} \hyperlink{object_8h_a
 void \hyperlink{object_8h_a987123ac01289d1f52a40b3e09fc9f9d}{add\+\_\+component} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj, struct \hyperlink{structcomponent__t}{component\+\_\+t} $\ast$c)
 \item 
 void \hyperlink{object_8h_a1465029ef5f7018ad94130903ba904dc}{register\+\_\+object} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj, \hyperlink{structscenario__t}{scenario\+\_\+t} $\ast$scenario)
+\item 
+\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$ \hyperlink{object_8h_ada5743df7cbe1d853f115b157ee96881}{get\+\_\+component\+\_\+by\+\_\+type} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj, uint8\+\_\+t type)
 \end{DoxyCompactItemize}
 
 
@@ -56,6 +58,23 @@ Add component to object
 {\em obj} & Object containing the component. \\
 \hline
 {\em c} & Component to add. \\
+\hline
+\end{DoxyParams}
+\index{object.\+h@{object.\+h}!get\+\_\+component\+\_\+by\+\_\+type@{get\+\_\+component\+\_\+by\+\_\+type}}
+\index{get\+\_\+component\+\_\+by\+\_\+type@{get\+\_\+component\+\_\+by\+\_\+type}!object.\+h@{object.\+h}}
+\subsubsection[{\texorpdfstring{get\+\_\+component\+\_\+by\+\_\+type(object\+\_\+t $\ast$obj, uint8\+\_\+t type)}{get\_component\_by\_type(object\_t *obj, uint8\_t type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf component\+\_\+t}$\ast$ get\+\_\+component\+\_\+by\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{{\bf object\+\_\+t} $\ast$}]{obj, }
+\item[{uint8\+\_\+t}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{object_8h_ada5743df7cbe1d853f115b157ee96881}{}\label{object_8h_ada5743df7cbe1d853f115b157ee96881}
+Get a component by type
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Object owning the component. \\
+\hline
+{\em type} & Type of component \\
 \hline
 \end{DoxyParams}
 \index{object.\+h@{object.\+h}!object\+\_\+create@{object\+\_\+create}}

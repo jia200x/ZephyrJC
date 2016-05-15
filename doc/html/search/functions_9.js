@@ -10,7 +10,7 @@ var searchData=
   ['sm_5finit',['sm_init',['../scenario__manager_8h.html#ab27341d3e156526758bb165ee1536e1e',1,'scenario_manager.h']]],
   ['sm_5fprocess',['sm_process',['../scenario__manager_8h.html#a81fd804819b7908d05b6970f1f796e62',1,'scenario_manager.h']]],
   ['sm_5frender',['sm_render',['../scenario__manager_8h.html#a09dbe018eb26711cdca2cd4fe90ec877',1,'scenario_manager.h']]],
-  ['sprite_5finit',['sprite_init',['../sprite_8h.html#aec72c3e6bb317c418c77df2a632e486f',1,'sprite.h']]],
+  ['sprite_5fcreate',['sprite_create',['../sprite_8h.html#ac17d79cce7a3bf615f990598bd6881c5',1,'sprite.h']]],
   ['sprite_5frender',['sprite_render',['../sprite_8h.html#ad1436e0ad57b5128d9829888e1f3efed',1,'sprite.h']]],
   ['sprite_5fset',['sprite_set',['../sprite_8h.html#a7e31a00c6874249a5b828c3ee2ade414',1,'sprite.h']]]
 ];

@@ -7,6 +7,7 @@ scenario_t *scenario_create(zephyrjc_t *zjc)
 {
 	scenario_t *s = (scenario_t*) malloc(sizeof(scenario_t));	
 	s->graphics = &zjc->core.graphics;
+	s->core = &zjc->core;
 	linked_list_init(&s->objects);
     event_dispatcher_init(&s->ed);
 	return s;

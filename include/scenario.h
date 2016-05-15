@@ -4,7 +4,7 @@
 #include <inttypes.h>
 #include "sys.h"
 #include "eventdispatcher.h"
-#include "graphics.h"
+#include "core.h"
 
 
 typedef struct object_t object_t;
@@ -20,6 +20,7 @@ typedef struct scenario_t
 	event_dispatcher_t ed; /**< Event dispatcher of current scenario */
 	/*Access to core*/
 	graphics_t *graphics; /**< Pointer to graphics controller */
+	core_t *core;
 } scenario_t;
 
 /**

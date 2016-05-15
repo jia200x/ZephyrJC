@@ -8,6 +8,11 @@
 \item 
 struct \hyperlink{structsprite__t}{sprite\+\_\+t}
 \begin{DoxyCompactList}\small\item\em Sprite component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sprite_8h_a7295b0a2c957b886921a4179b9377019}{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+S\+P\+R\+I\+TE}~(1)
+\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,12 +23,18 @@ typedef struct \hyperlink{structobject__t}{object\+\_\+t} \hyperlink{sprite_8h_a
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{sprite_8h_aec72c3e6bb317c418c77df2a632e486f}{sprite\+\_\+init} (\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$c, void $\ast$$\ast$args)
+\hyperlink{structcomponent__t}{component\+\_\+t} $\ast$ \hyperlink{sprite_8h_ac17d79cce7a3bf615f990598bd6881c5}{sprite\+\_\+create} (\hyperlink{structobject__t}{object\+\_\+t} $\ast$obj)
 \item 
 void \hyperlink{sprite_8h_a7e31a00c6874249a5b828c3ee2ade414}{sprite\+\_\+set} (\hyperlink{structsprite__t}{sprite\+\_\+t} $\ast$sprite, \hyperlink{structsprite_buffer__t}{sprite\+Buffer\+\_\+t} $\ast$sb)
 \item 
 void \hyperlink{sprite_8h_ad1436e0ad57b5128d9829888e1f3efed}{sprite\+\_\+render} (void $\ast$c, void $\ast$args)
 \end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{sprite.\+h@{sprite.\+h}!C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+S\+P\+R\+I\+TE@{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+S\+P\+R\+I\+TE}}
+\index{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+S\+P\+R\+I\+TE@{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+S\+P\+R\+I\+TE}!sprite.\+h@{sprite.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+S\+P\+R\+I\+TE}{COMPONENT\_SPRITE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+S\+P\+R\+I\+TE~(1)}\hypertarget{sprite_8h_a7295b0a2c957b886921a4179b9377019}{}\label{sprite_8h_a7295b0a2c957b886921a4179b9377019}
 
 
 \subsection{Typedef Documentation}
@@ -40,23 +51,21 @@ Sprite component.
 
 
 \subsection{Function Documentation}
-\index{sprite.\+h@{sprite.\+h}!sprite\+\_\+init@{sprite\+\_\+init}}
-\index{sprite\+\_\+init@{sprite\+\_\+init}!sprite.\+h@{sprite.\+h}}
-\subsubsection[{\texorpdfstring{sprite\+\_\+init(component\+\_\+t $\ast$c, void $\ast$$\ast$args)}{sprite\_init(component\_t *c, void **args)}}]{\setlength{\rightskip}{0pt plus 5cm}void sprite\+\_\+init (
+\index{sprite.\+h@{sprite.\+h}!sprite\+\_\+create@{sprite\+\_\+create}}
+\index{sprite\+\_\+create@{sprite\+\_\+create}!sprite.\+h@{sprite.\+h}}
+\subsubsection[{\texorpdfstring{sprite\+\_\+create(object\+\_\+t $\ast$obj)}{sprite\_create(object\_t *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf component\+\_\+t}$\ast$ sprite\+\_\+create (
 \begin{DoxyParamCaption}
-\item[{{\bf component\+\_\+t} $\ast$}]{c, }
-\item[{void $\ast$$\ast$}]{args}
+\item[{{\bf object\+\_\+t} $\ast$}]{obj}
 \end{DoxyParamCaption}
-)}\hypertarget{sprite_8h_aec72c3e6bb317c418c77df2a632e486f}{}\label{sprite_8h_aec72c3e6bb317c418c77df2a632e486f}
-Init component. Called from create\+\_\+component.
-
-
+)}\hypertarget{sprite_8h_ac17d79cce7a3bf615f990598bd6881c5}{}\label{sprite_8h_ac17d79cce7a3bf615f990598bd6881c5}
+Create a sprite component and add to object 
 \begin{DoxyParams}{Parameters}
-{\em c} & Pointer to component \\
-\hline
-{\em args} & Arguments passed from init \\
+{\em obj} & Object to add component \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to new sprite component 
+\end{DoxyReturn}
 \index{sprite.\+h@{sprite.\+h}!sprite\+\_\+render@{sprite\+\_\+render}}
 \index{sprite\+\_\+render@{sprite\+\_\+render}!sprite.\+h@{sprite.\+h}}
 \subsubsection[{\texorpdfstring{sprite\+\_\+render(void $\ast$c, void $\ast$args)}{sprite\_render(void *c, void *args)}}]{\setlength{\rightskip}{0pt plus 5cm}void sprite\+\_\+render (
@@ -84,12 +93,12 @@ Automatically draw sprite
 \item[{{\bf sprite\+Buffer\+\_\+t} $\ast$}]{sb}
 \end{DoxyParamCaption}
 )}\hypertarget{sprite_8h_a7e31a00c6874249a5b828c3ee2ade414}{}\label{sprite_8h_a7e31a00c6874249a5b828c3ee2ade414}
-Set sprite
+Init component. Called from create\+\_\+component.
 
 
 \begin{DoxyParams}{Parameters}
-{\em sprite} & Pointer to sprite component \\
+{\em c} & Pointer to component \\
 \hline
-{\em sb} & Pointer to image to set \\
+{\em args} & Arguments passed from init \\
 \hline
 \end{DoxyParams}

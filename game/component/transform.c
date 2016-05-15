@@ -18,5 +18,6 @@ void transform_process(void *c, void *args)
 	transform_t *t = (transform_t*) c;
 	t->x += t->x_speed;
 	t->y += t->y_speed;
+	printf("keyboard: %i\n", keyboard_get_key(&((component_t*) c)->obj->scenario->core->keyboard, VK_LEFT));
 }
 
