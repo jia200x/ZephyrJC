@@ -1,5 +1,6 @@
 #include "component/transform.h"
 #include "eventdispatcher.h"
+#include "core.h"
 
 component_t *transform_create(object_t *obj)
 {
@@ -18,6 +19,7 @@ void transform_process(void *c, void *args)
 	transform_t *t = (transform_t*) c;
 	t->x += t->x_speed;
 	t->y += t->y_speed;
-	printf("keyboard: %i\n", keyboard_get_key(&((component_t*) c)->obj->scenario->core->keyboard, VK_LEFT));
+	core_t *core = (core_t*) args;
+	printf("Release keyboard: %i\n", keyboard_get_keyreleased(&core->keyboard, VK_LEFT));
 }
 

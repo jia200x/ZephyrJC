@@ -15,7 +15,7 @@ scenario_t *scenario_create(zephyrjc_t *zjc)
 
 void scenario_process(scenario_t *scenario)
 {
-	dispatch_event(&scenario->ed, EV_UPDATE, NULL);
+	dispatch_event(&scenario->ed, EV_UPDATE, (void*) scenario->core);
 }
 
 void register_scenario(scenario_t *scenario, zephyrjc_t *zjc)
